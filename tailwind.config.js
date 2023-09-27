@@ -1,6 +1,7 @@
-const typography = require('@tailwindcss/typography');
-
 module.exports = {
 	content: ['./hugo_stats.json'],
-	plugins: [typography],
+	plugins: [
+    require('@tailwindcss/forms'),		
+		require('@tailwindcss/typography'),
+	],
 };

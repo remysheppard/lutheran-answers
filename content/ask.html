@@ -1,0 +1,37 @@
+---
+title: Ask A Question
+avoid: true
+---
+
+Do you have a question about Lutheranism, the Christian faith, or Religion in general? You can use the form below to ask your question!
+
+<form netlify name="ask" method="POST" action="/thank-you" data-netlify-recaptcha="true" class="flex flex-col w-10/12 mx-auto md:mx-0 justify-between">
+
+  <label class="mt-5">Full Name </label>
+  <span class="h-2 my-1 bg-gradient-to-r from-gray-300 to-transparent w-1/3 rounded"></span>
+  <div class="w-full flex flex-row justify-between">
+    <input type="text" name="FirstName" class="w-1/2 mr-1 rounded ring-0 focus:ring-0 focus:shadow border-0 focus:border-0 bg-gray-200 focus:bg-white mt-2" placeholder="First" /> 
+    <input type="text" name="LastName" class="w-1/2 rounded ring-0 focus:ring-0 focus:shadow border-0 focus:border-0 bg-gray-200 focus:bg-white mt-2" placeholder="Last" />
+  </div>
+
+  <label class="mt-5">Email </label>
+  <span class="h-2 my-1 bg-gradient-to-r from-gray-300 to-transparent w-1/3 rounded"></span>
+    <input type="email" name="Email" class="rounded ring-0 focus:ring-0 focus:shadow border-0 focus:border-0 bg-gray-200 focus:bg-white mt-2" />
+
+  <label class="mt-5">Subject</label>
+  <span class="h-2 my-1 bg-gradient-to-r from-gray-300 to-transparent w-1/3 rounded"></span>
+    <select name="Subject" class="rounded ring-0 focus:ring-0 border-0 focus:border-0 bg-gray-200 focus:bg-white mt-2 focus:shadow">
+      <option value="Religion">Religion In General</option>
+      <option value="Christianity">Christianity In Particular</option>
+      <option value="Lutheranism">Lutheranism Specifically</option>
+      <option value="Other Question">Other Question</option>
+    </select>
+
+  <label class="mt-5">Your Question </label>
+  <span class="h-2 my-1 bg-gradient-to-r from-gray-300 to-transparent w-1/3 rounded"></span>
+    <textarea name="field5" id="Message" class="rounded ring-0 focus:ring-0 focus:shadow border-0 focus:border-0 bg-gray-200 focus:bg-white h-60 resize-none mt-2" style="overflow:overlay"></textarea>
+
+  <div data-netlify-recaptcha="true"></div>
+
+  <input type="submit" value="Submit" class="mt-5 rounded ring-0 hover:shadow border-0 focus:border-0 py-2 text-white bg-gradient-to-r from-indigo-400 to-indigo-500 hover:from-indigo-300 hover:to-indigo-400 cursor-pointer">
+</form>

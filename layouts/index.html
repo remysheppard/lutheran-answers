@@ -1,13 +1,40 @@
 {{ define "main" }}
-  <article class="prose lg:prose-xl">
-    <h1>Tailwind 3 Hugo Starter</h1>
 
-    <h2 class="text-4xl">Testing Tailwind 3 Features</h2>
-    <div>
-      <button class="bg-[green] p-4">Share on Twitter</button>
-    </div>
+  <div class="flex flex-col md:flex-row flex-wrap w-full justify-evenly mt-10">
+    
+    {{ range $index, $element := first 6 (where site.RegularPages "Section" "eq" "answers") }}
+      
+      {{ $imagePath := printf "images/%s/%s" .Page.Type .Params.feature }}
+      {{ $image := resources.Get $imagePath }}
 
-    <h2 class="text-4xl">Markdowns: {{ .Title }}</h2>
-    {{ .Content }}..
-  </article>
+      <a href="{{ .Permalink }}" style="background-image:url('{{ ($image.Resize "500x q65 jpg").RelPermalink }}')" class="bg-cover h-52 w-full sm:w-auto mx-auto my-5 max-h-52 rounded-xl px-2 shadow bg-gray-800 bg-blend-overlay flex flex-col justify-center hover:bg-gray-400 transition-all duration-200">
+        <h4 class="uppercase text-red-300 text-center mb-0 font-sans" style="text-shadow:1px 1px 2px rgba(0,0,0,0.6)">Latest Answers</h4>
+        <h3 class="text-white text-center text-2xl w-3/4 mx-auto" style="text-shadow:1px 1px 2px rgba(0,0,0,0.6)">{{ .Title }}</h3>
+      </a>
+
+    {{ end }}
+
+  </div>
+
+  <div class="flex flex-col md:flex-row flex-wrap w-full justify-evenly mt-10">
+
+    {{ range $index, $element := first 1 (where site.RegularPages "Section" "eq" "blog") }}
+      
+      {{ $imagePath := printf "images/%s/%s" .Page.Type .Params.feature }}
+      {{ $image := resources.Get $imagePath }}
+
+      <a href="{{ .Permalink }}" style="background-image:url('{{ ($image.Resize "500x q65 jpg").RelPermalink }}')" class="bg-cover w-full mx-auto w-10/12 rounded-xl px-2 py-10 md:mx-5 my-10 h-64 shadow bg-gray-800 bg-blend-overlay flex flex-col justify-center hover:bg-gray-400 transition-all duration-100">
+        <h4 class="uppercase text-red-300 text-center mb-0 font-sans" style="text-shadow:1px 1px 2px rgba(0,0,0,0.6)">From the blog</h4>
+        <h3 class="text-white text-center text-2xl w-3/4 mx-auto" style="text-shadow:1px 1px 2px rgba(0,0,0,0.6)">{{ .Title }}</h3>
+      </a>
+
+    {{ end }}
+
+  </div>
+
+  <div class="my-5">
+    {{.Content}}
+  </div>
+
+</div>
 {{ end }}

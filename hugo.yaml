@@ -1,0 +1,110 @@
+baseURL: 'https://www.lutherananswers.com'
+
+taxonomies:
+  category: categories
+  tag: tags
+
+
+markup:
+  goldmark:
+    renderer:
+      unsafe: true
+
+params:
+  description: 'Your questions about the Christian faith, answered.'
+  author: Remy Sheppard
+  donate: 'https://donate.stripe.com/cN25mgfss4Q12Fa001'
+  search:
+    enable: true
+
+menu:
+  top:
+    - identifier: home
+      name: Home
+      url: /
+      weight: 1
+      pre: ''
+
+    - identifier: answers
+      name: Answers
+      url: /answers
+      weight: 2
+      pre: ''
+
+    - identifier: shop
+      name: Shop
+      url: https://lutherananswers.gumroad.com
+      weight: 3
+      pre: ''
+
+
+  secondary:
+    - identifier: answers
+      name: Answers
+      url: /answers
+      weight: 1
+      pre: '<i class="fa-sharp fa-light fa-seal-question mr-2"></i>'
+
+    - identifier: podcast
+      name: Podcast
+      url: https://podcast.lutherananswers.com/
+      weight: 2
+      pre: '<i class="fa-light fa-microphone-lines mr-2"></i>'
+
+    - identifier: shop
+      name: Shop
+      url: https://lutherananswers.gumroad.com
+      weight: 3
+      pre: '<i class="fa-light fa-bag-shopping mr-2"></i>'
+
+    - identifier: boc
+      name: Book of Concord
+      url: https://www.lutheranconfessions.org/boc/
+      weight: 4
+      pre: '<i class="fa-light fa-books mr-2"></i>'
+
+
+  meta:
+    - identifier: ask
+      name: Ask
+      url: /ask
+      weight: 1
+      pre: ''
+      post: ' a Question'
+
+    - identifier: corrections
+      name: Correction
+      url: /correction
+      weight: 2
+      pre: 'Submit a '
+      post: ''
+
+    - identifier: legal
+      name: Legal
+      url: /policies
+      weight: 3
+      pre: ''
+      post: ''
+
+
+## Hugo Caching thing for TailWindCSS - I do not understand it.
+module:
+  hugoVersion:
+    extended: false
+    min: 0.118.2
+  mounts:
+    - source: assets
+      target: assets
+    - source: hugo_stats.json
+      target: assets/watching/hugo_stats.json
+build:
+  writeStats: true
+  cachebusters:
+    - source: assets/watching/hugo_stats\.json
+      target: styles\.css
+    - source: (postcss|tailwind)\.config\.js
+      target: css
+    - source: assets/.*\.(js|ts|jsx|tsx)
+      target: js
+    - source: assets/.*\.(.*)$
+      target: $1

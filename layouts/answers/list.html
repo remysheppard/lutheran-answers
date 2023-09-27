@@ -1,0 +1,48 @@
+{{ define "main" }}
+
+	<h1 class="max-w-2xl">{{ .Title }}</h1>
+
+	<div class="w-full p-5 lg:w-1/2 text-lg text-gray-500">
+		{{ .Content }}
+	</div>
+
+	{{ if .Parent.IsHome }}
+
+		<h2 class="text-2xl text-gray-700 mt-7 mb-7 text-center sm:text-left">Answers by Topic</h2>
+
+		<section class="w-full flex flex-wrap flex-row">
+			{{ range .Data.Pages }}
+				{{ if .IsSection }}
+					<a href="{{ .Permalink }}" class="flex flex-row items-center bg-gray-200 shadow m-2 py-5 px-7 rounded-xl cursor-pointer hover:bg-white transition-all duration-200 hover:shadow-lg">
+						<svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 mr-2 inline" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+					  	<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 7v10a2 2 0 002 2h14a2 2 0 002-2V9a2 2 0 00-2-2h-6l-2-2H5a2 2 0 00-2 2z" />
+						</svg>
+						{{ .Params.Topic }}
+					</a>
+				{{ end }}
+		  {{ end }}
+		</section>
+
+		<h2 class="text-2xl text-gray-700 mt-14 text-center sm:text-left">Browse All Answers</h2>
+		
+		<section class="w-full flex flex-col md:flex-row flex-wrap justify-start">
+			{{ range .RegularPagesRecursive }}
+				{{ .Render "summary" }}
+			{{ end }}
+		</section>
+
+	{{ else }}
+
+		<h2 class="text-2xl text-gray-700 mt-14 text-center sm:text-left">Browse {{ .Params.topic }} Answers</h2>
+
+		<section class="w-full flex flex-col md:flex-row sm:flex-wrap justify-center sm:justify-start">
+  		{{ range .Pages }}
+				{{ .Render "summary" }}
+			{{ end }}
+		</section>
+
+	{{ end }}
+
+	{{ partial "pagination.html" . }}
+
+{{ end }}

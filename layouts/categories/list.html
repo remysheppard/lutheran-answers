@@ -1,0 +1,25 @@
+{{ define "main" }}
+
+<h1>{{ .Title }}</h1>
+  {{ .Content }}
+
+  {{ range .Pages }}
+
+  {{ if (eq .Page.Type "blog") }}
+    {{ .Scratch.Set "type" "Blog Post" }}
+  {{ else if (eq .Page.Type "answers") }}
+    {{ .Scratch.Set "type" "Q & A" }}
+  {{ else if (eq .Page.Type "podcast") }}
+    {{ .Scratch.Set "type" "Podcast" }}
+  {{ else if (eq .Page.Type "concord") }}
+    {{ .Scratch.Set "type" "Book of Concord" }}
+  {{ end }}
+
+    <li>
+      <span class="font-bold text-red-700">[ {{ .Scratch.Get "type" }} ]</span>
+      <a href="{{ .Permalink }}" class="text-indigo-400 hover:text-indigo-600 hover:underline">
+        {{ .Title }}
+      </a>
+    </li>
+  {{ end }}
+{{ end }}

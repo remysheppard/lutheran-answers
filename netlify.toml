@@ -3,7 +3,7 @@ publish = "public"
 command = "hugo --gc --minify -d public;"
 
 [context.production.environment]
-HUGO_VERSION = "0.112.0"
+HUGO_VERSION = "0.118.2"
 
 [context.branch-deploy]
 command = "hugo --minify --gc -d public -b $DEPLOY_PRIME_URL"
