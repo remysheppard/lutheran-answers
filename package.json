@@ -15,6 +15,7 @@
 	"name": "hugo-starter-tailwind-basic",
 	"version": "0.1.0",
 	"dependencies": {
-		"flexsearch": "^0.7.31"
+		"flexsearch": "^0.7.31",
+		"tailwindcss-brand-colors": "^0.3.3"
 	}
 }

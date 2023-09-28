@@ -8,12 +8,7 @@
       <div class="lg:w-1/4 md:w-1/2 w-full px-4">
         <h2 class="title-font font-medium text-gray-900 uppercase tracking-widest text-sm mb-3">Our Website</h2>
         <nav class="list-none mb-10">
-          {{ range .Site.Menus.top }}
-            <li>
-              <a href="{{ .URL }}" class="text-gray-600 hover:text-gray-800">{{ .Name }}</a>
-            </li>
-          {{ end }}
-          {{ range .Site.Menus.secondary }}
+          {{ range .Site.Menus.main }}
             <li>
               <a href="{{ .URL }}" class="text-gray-600 hover:text-gray-800">{{ .Name }}</a>
             </li>
@@ -51,7 +46,7 @@
   <div class="bg-gray-300">
     <div class="container px-5 py-6 mx-auto flex items-center sm:flex-row flex-col">
       <a href="{{ .Site.BaseURL }}" target="_blank" class="flex title-font font-medium items-center md:justify-start justify-center text-gray-900">
-        <img src="{{ .Site.BaseURL }}/images/footer-logo.png" class="w-10 h-10 bg-white rounded-full">
+        <img src="{{ .Site.BaseURL }}/images/logo.svg" class="w-10 h-10">
         <span class="ml-3 text-xl">Lutheran Answers</span>
       </a>
       <p class="text-sm text-gray-500 sm:ml-6 sm:mt-0 mt-4 mb-0">© {{ dateFormat "2006" now }} Lutheran Answers —

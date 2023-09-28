@@ -11,7 +11,7 @@
     <input name="q" type="text" class="w-full py-1 pl-10 pr-4 text-gray-700 placeholder-gray-500 bg-gray-200 border-0  outline-none focus:outline-none focus:ring-0 focus:bg-white rounded-full" placeholder="Search">
   </form>
 
-  {{ range .Site.Menus.secondary }}
+  {{ range .Site.Menus.main }}
     <a href="{{ .URL }}" class="text-gray-800 text-center lg:text-left font-bold transition transition-all duration-200 hover:bg-gray-100 block hover:shadow p-6">
       {{ .Pre }} {{ .Name }}
     </a>
@@ -20,9 +20,6 @@
   <hr class="my-10 w-9/12 mx-auto bg-gradient-to-r from-transparent to-transparent via-black h-px border-none">
 
   <div class="flex justify-around flex-wrap w-full">
-    {{ range .Site.Menus.top }}
-      <a href="{{ .URL }}" class="text-gray-800 text-center transition font-bold transition-all duration-200 hover:bg-gray-100 inline-block w-1/4 m-2 hover:shadow p-3">{{ .Name }}</a>
-    {{ end }}
     {{ range .Site.Menus.meta }}
       <a href="{{ .URL }}" class="text-gray-800 text-center transition font-bold transition-all duration-200 hover:bg-gray-100 inline-block w-1/4 m-2 hover:shadow p-3">{{ .Name }}</a>
     {{ end }}

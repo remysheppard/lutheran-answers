@@ -2,26 +2,32 @@
   <div class="container flex-row px-6 py-4 mx-auto flex lg:justify-between lg:items-center">
     <div class="lg:flex lg:items-center">
       <div class="flex items-center justify-between">
-        <div>
-          <a class="text-2xl font-bold text-gray-800  lg:text-3xl hover:text-gray-700 " href="{{ .Site.BaseURL }}">
-            <img src="{{ .Site.BaseURL }}/images/logo.svg" class="h-14">
-          </a>
-        </div>
-      </div>
 
-      <div id="navigation" class="flex flex-col text-gray-600 capitalize lg:flex lg:px-16 lg:-mx-4 lg:flex-row lg:items-center hidden">
+        <a href="{{ .Site.BaseURL }}">
+          <img src="{{ .Site.BaseURL }}/images/logo.svg" class="h-14">
+        </a>
 
-        {{ range .Site.Menus.top }}
-          <a href="{{ .URL }}" class="my-2 lg:my-0 lg:mx-4 hover:text-black">{{ .Name }}</a>
-        {{ end }}
-
-        {{ partial "donate-button" . }}
-        
+        <a href="{{ .Site.BaseURL }}" class="text-2xl ml-10 font-bold text-gray-800  lg:text-3xl hover:text-gray-700">
+          {{ .Site.Title }}
+        </a>
 
       </div>
+
+
     </div>
 
-    <div class="flex justify-center items-center text-center mt-6 lg:flex lg:mt-0 lg:ml-auto lg:mr-10 hidden lg:block">
+    <div id="navigation" class="flex flex-col text-gray-600 capitalize lg:flex lg:px-16 lg:ml-auto lg:flex-row lg:items-center hidden">
+
+      {{ range .Site.Menus.main }}
+        <a href="{{ .URL }}" class="my-2 lg:my-0 lg:mx-4 hover:text-black">{{ .Name }}</a>
+      {{ end }}
+
+      {{ partial "donate-button" . }}
+      
+
+    </div>
+
+    <div class="flex justify-center items-center text-center mt-6 lg:flex lg:mt-0 lg:mr-10 hidden lg:block">
       {{ partial "social" (dict "context" . "size" "5") }}
     </div>
 
