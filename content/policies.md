@@ -1,13 +1,11 @@
 ---
-title: Policies
-avoid: true
+title: Our Policies
 ---
-
-# Our policies and legal information
-
 This page contains our legal, comment, affiliate, and other policies. This page will be updated as needed without notice.
 
 ## Comment Policy
+
+*Please note comments are not available at this time, but this will be the policy when the feature is added.*
 
 Comments are welcomed and encouraged on this site, but there are some instances where comments will be edited or deleted as follows:
 
@@ -28,7 +26,7 @@ We participate in various affiliate programs as a way to support this website. A
 
 Your privacy is important to us. It is Lutheran Answers' policy to respect your privacy and comply with any applicable law and regulation regarding any personal information we may collect about you, including across our website, [https://www.lutherananswers.com](https://www.lutherananswers.com), and other sites we own and operate.
 
-**This policy is effective as of 10 May 2021 and was last updated on 10 May 2021.**
+**This policy is effective as of 10 May 2021 and was last updated on 28 September 2023.**
 
 ### Information We Collect
 
@@ -39,6 +37,8 @@ Information we collect includes both information you knowingly and actively prov
 When you visit our website, our servers may automatically log the standard data provided by your web browser. It may include your device’s Internet Protocol (IP) address, your browser type and version, the pages you visit, the time and date of your visit, the time spent on each page, other details about your visit, and technical details that occur in conjunction with any errors you may encounter.
 
 Please be aware that while this information may not be personally identifying by itself, it may be possible to combine it with other data to personally identify individual persons.
+
+Please know that on this website we use [Fathom Analytics](https://usefathom.com/ref/JHDRUD), a privacy focused analytics service. While we try and integrate Fathom and use them as our analytic source to safeguard your privacy, some of our partner websites - including Buzzsprout, Convertkit, and Gumroad - may have their own analytics services in place, and you should familiarize yourself with their privacy policies.
 
 ### Personal Information
 

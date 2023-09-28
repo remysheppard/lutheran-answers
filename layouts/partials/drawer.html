@@ -1,15 +1,7 @@
 <div id="mySidenav" class="sidenav h-screen w-0 fixed z-40 top-0 right-0 overflow-x-hidden transition-all duration-200 pt-12 bg-gray-300 shadow" style="max-width:100vw;">
   <a href="javascript:void(0)" class="closebtn absolute top-0 right-5 text-6xl ml-20" onclick="closeNav()">&times;</a>
   
-  <form class="relative my-5 mx-auto w-2/3" action="{{ .Site.BaseURL }}/search/" method="GET">
-    <span class="absolute inset-y-0 left-0 flex items-center pl-3">
-      <svg class="w-4 h-4 text-gray-600" viewBox="0 0 24 24" fill="none">
-        <path d="M21 21L15 15M17 10C17 13.866 13.866 17 10 17C6.13401 17 3 13.866 3 10C3 6.13401 6.13401 3 10 3C13.866 3 17 6.13401 17 10Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
-      </svg>
-    </span>
 
-    <input name="q" type="text" class="w-full py-1 pl-10 pr-4 text-gray-700 placeholder-gray-500 bg-gray-200 border-0  outline-none focus:outline-none focus:ring-0 focus:bg-white rounded-full" placeholder="Search">
-  </form>
 
   {{ range .Site.Menus.main }}
     <a href="{{ .URL }}" class="text-gray-800 text-center lg:text-left font-bold transition transition-all duration-200 hover:bg-gray-100 block hover:shadow p-6">
