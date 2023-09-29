@@ -15,8 +15,9 @@ params:
   description: 'Your questions about the Christian faith, answered.'
   author: Remy Sheppard
   donate: 'https://donate.stripe.com/cN25mgfss4Q12Fa001'
-  search:
-    enable: true
+
+  image: /images/16-9-image.png
+  
 
 menu:
   main:
