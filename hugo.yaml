@@ -1,5 +1,5 @@
 baseURL: 'https://www.lutherananswers.com/'
-title: Lutheran Answers
+title: "Lutheran Answers"
 
 taxonomies:
   category: categories
