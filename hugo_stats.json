@@ -156,6 +156,7 @@
       "hover:from-yellow-600",
       "hover:shadow",
       "hover:shadow-lg",
+      "hover:shadow-md",
       "hover:text-black",
       "hover:text-facebook",
       "hover:text-gray-700",

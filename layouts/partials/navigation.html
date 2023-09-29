@@ -19,7 +19,7 @@
     <div id="navigation" class="flex flex-col text-gray-600 capitalize lg:flex lg:px-16 lg:ml-auto lg:flex-row lg:items-center hidden">
 
       {{ range .Site.Menus.main }}
-        <a href="{{ .URL }}" class="my-2 lg:my-0 lg:mx-4 hover:text-black">{{ .Name }}</a>
+        <a href="{{ .URL }}" class="my-2 lg:my-0 transition duration-200 hover:text-black rounded hover:shadow-md py-2 px-5">{{ .Name }}</a>
       {{ end }}
 
       {{ partial "donate-button" . }}
