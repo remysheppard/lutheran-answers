@@ -2,6 +2,7 @@
 title: The Great Lutheran Khanate?
 author: remy
 feature: khanate-flag.png
+categories: Lutheranism
 description: The Great Lutheran Khanate is a viral twitter meme about a ficticious system of government symbolized by the American Bison and, consequently, the bison emoji 🦬.
 date: 2021-04-25
 ---

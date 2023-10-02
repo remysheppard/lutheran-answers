@@ -1,37 +1,37 @@
 {{ $backgroundImage := ((resources.Get "/images/last-supper.jpg").Resize "1200x webp q60") }}
 
-<hr class="mt-20 w-10/12 mx-auto bg-gradient-to-r from-transparent to-transparent via-black h-px border-none">
+<hr class="mt-20 w-10/12 mx-auto bg-gradient-to-r from-transparent to-transparent via-brand-red h-px border-none">
 
-<footer class="text-gray-600 bg-white bg-opacity-70 bg-blend-overlay bg-center bg-cover" style="background-image:url('{{- $backgroundImage.RelPermalink -}}');">
+<footer class="text-white bg-black bg-opacity-70 bg-blend-overlay bg-center bg-cover" style="background-image:url('{{- $backgroundImage.RelPermalink -}}');">
   <div class="container px-5 py-24 mx-auto">
     <div class="flex flex-col lg:flex-row items-center md:text-left text-center order-first">
       <div class="lg:w-1/4 md:w-1/2 w-full px-4">
-        <h2 class="title-font font-medium text-gray-900 uppercase tracking-widest text-sm mb-3">Our Website</h2>
+        <h2 class="title-font font-medium text-brand-yellow uppercase tracking-widest text-sm mb-3">Our Website</h2>
         <nav class="list-none mb-10">
           {{ range .Site.Menus.main }}
             <li>
-              <a href="{{ .URL }}" class="text-gray-600 hover:text-gray-800">{{ .Name }}</a>
+              <a href="{{ .URL }}" class="text-white hover:text-brand-purple">{{ .Name }}</a>
             </li>
           {{ end }}
         </nav>
       </div>
       <div class="lg:w-1/4 md:w-1/2 w-full px-4">
-        <h2 class="title-font font-medium text-gray-900 tracking-widest uppercase text-sm mb-3">Legal</h2>
+        <h2 class="title-font font-medium text-brand-yellow tracking-widest uppercase text-sm mb-3">Legal</h2>
         <nav class="list-none mb-10">
           {{ range .Site.Menus.meta }}
             <li>
-              <a href="{{ .URL }}" class="text-gray-600 hover:text-gray-800">{{ .Pre }}{{ .Name }}{{ .Post }}</a>
+              <a href="{{ .URL }}" class="text-white hover:text-brand-purple">{{ .Pre }}{{ .Name }}{{ .Post }}</a>
             </li>
           {{ end }}
         </nav>
       </div>
       <div class="lg:w-1/4 md:w-1/2 w-full px-4">
-        <h2 class="title-font font-medium text-gray-900 uppercase tracking-widest text-sm mb-3">Topics</h2>
+        <h2 class="title-font font-medium text-brand-yellow uppercase tracking-widest text-sm mb-3">Topics</h2>
         <nav class="list-none mb-10">
           <!-- make sure you limit this range later lol -->
           {{- range .Site.Taxonomies.categories -}}
             <li>
-              <a href="{{ .Page.Permalink }}" class="capitalize text-gray-600 hover:text-gray-800">
+              <a href="{{ .Page.Permalink }}" class="capitalize text-white hover:text-brand-purple">
                 {{ .Page.Title }}
               </a>
             </li>
@@ -39,22 +39,22 @@
         </nav>
       </div>
       <div class="lg:w-1/4 md:w-1/2 w-full px-4">
-        <h2 class="title-font font-medium text-gray-900 uppercase tracking-widest text-sm mb-3">Subscribe</h2>
+        <h2 class="title-font font-medium text-brand-yellow uppercase tracking-widest text-sm mb-3">Subscribe</h2>
         <script async data-uid="9843d97610" src="https://lutherananswers.ck.page/9843d97610/index.js"></script>
       </div>
     </div>
   </div>
-  <div class="bg-gray-300">
+  <div class="bg-transparent">
     <div class="container px-5 py-6 mx-auto flex items-center sm:flex-row flex-col">
-      <a href="{{ .Site.BaseURL }}" target="_blank" class="flex title-font font-medium items-center md:justify-start justify-center text-gray-900">
-        <img src="{{ .Site.BaseURL }}/images/logo.svg" class="w-10 h-10">
+      <a href="{{ .Site.BaseURL }}" target="_blank" class="flex title-font font-medium items-center md:justify-start justify-center text-white">
+        <img src="{{ .Site.BaseURL }}/images/logo-white.svg" class="w-12 h-12">
         <span class="ml-3 text-xl">Lutheran Answers</span>
       </a>
-      <p class="text-sm text-gray-500 sm:ml-6 sm:mt-0 mt-4 mb-0">© {{ dateFormat "2006" now }} Lutheran Answers —
-        <a href="https://x.com/lutherananswers" rel="noopener noreferrer" class="text-gray-600 ml-1" target="_blank">@LutheranAnswers</a>
+      <p class="text-sm text-white sm:ml-6 sm:mt-0 mt-4 mb-0">© {{ dateFormat "2006" now }} Lutheran Answers —
+        <a href="https://x.com/lutherananswers" rel="noopener noreferrer" class="text-white ml-1 hover:text-brand-purple" target="_blank">@LutheranAnswers</a>
       </p>
       
-      {{ partial "social" (dict "context" . "size" "5") }}
+      {{ partial "social" (dict "context" . "size" "5" "color" "white") }}
 
     </div>
   </div>

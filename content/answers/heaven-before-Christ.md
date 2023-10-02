@@ -2,6 +2,7 @@
 title: "How did people get to Heaven before Jesus?"
 author: remy
 feature: heaven.png
+categories: Christianity
 description: Did Abraham and the early Hebrew prophets go to heaven? How could they if Jesus hadn't been born yet? How do we know?
 date: 2021-04-25
 ---

@@ -70,7 +70,3 @@ They want to say, oh, well, the animal doesn't have a soul. It's not an insouled
 God can only save beings with souls. Who says that? God says he's going to redeem all creation. Right? And again, you're looking at salvation as something you do or you have a part in or you have to have a soul.
 
 God's going to do what he wants. God's going to save who he wants, right? He's going to do anything he desires because he's God and he can. And the one thing that we know from scripture that God desires is mercy and love. And this is who God is. This is the heart of his character. Mercy and love. And so, of course, because he's loving and merciful I don't think it's too far fetched to say your pet will be in heaven. That's what I think anyway.
-
-<br>
-
-{{< youtube L5YTB6Sz-wc >}}

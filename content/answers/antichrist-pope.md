@@ -2,6 +2,7 @@
 title: Is the Pope the Antichrist?
 author: remy
 feature: pope.png
+categories: Catholicism
 description: Calling The Pope "The Antichrist" can be a very off-putting and difficult thing, but there is a reason we Lutherans say it.
 date: 2021-04-25
 ---
@@ -21,5 +22,3 @@ This, also, is anti-Christ because it takes the focus of salvation off the perso
 So the Catholic church's teachings on salvation are anti-Christ, and their doctrines surrounding the office of the pope are anti-Christ. Necessarily, then, the person occupying the office of the pope must be an antichrist.
 
 Now, I do not, and would never, say that Jorge Bergoglio is the antichrist. I don't believe he is. But until he repents and abdicates the office of pope, I must declare that Pope Francis is antichrist.
-
-{{< youtube 1TPSauuE8H0 >}}

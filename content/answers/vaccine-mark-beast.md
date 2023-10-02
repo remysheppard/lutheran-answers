@@ -1,6 +1,7 @@
 ---
 title: "Is the COVID-19 Vaccine the Mark of the Beast?"
 author: remy
+categories: COVID-19
 feature: vaccine.png
 description: Should we believe that the COVID-19 vaccine is the Mark of the Beast? What about the fact that it's starting to look like you can't buy, sell, or work without it?
 date: 2021-04-25
