@@ -153,6 +153,7 @@
       "hover:text-reddit",
       "hover:text-tumblr",
       "hover:text-yellow-400",
+      "hover:to-yellow-500",
       "hover:underline",
       "hover:via-brand-yellow",
       "inline",
