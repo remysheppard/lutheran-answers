@@ -15,7 +15,9 @@
 	"name": "hugo-starter-tailwind-basic",
 	"version": "0.1.0",
 	"dependencies": {
+		"@splidejs/splide": "^4.1.4",
 		"flexsearch": "^0.7.31",
+		"postcss-import": "^15.1.0",
 		"tailwindcss-brand-colors": "^0.3.3"
 	}
 }

@@ -1,0 +1,21 @@
+{{- $jsNavigation := resources.Get "js/navigation.js" -}}
+{{- $jsTwemoji := resources.Get "js/twemoji.js" -}}
+
+{{ with resources.Get "js/splide.js" }}
+  {{ if eq hugo.Environment "development" }}
+    {{ with . | js.Build }}
+      <script>{{ .Content | safeJS }}</script>
+    {{ end }}
+  {{ else }}
+    {{ $opts := dict "minify" true }}
+    {{ with . | js.Build $opts | fingerprint }}
+      <script type="text/javascript">{{ .Content | safeJS }}</script>
+    {{ end }}
+  {{ end }}
+{{ end }}
+
+{{- $scripts := slice $jsNavigation $jsTwemoji | resources.Concat "js/main.js" -}}
+{{- if hugo.IsProduction -}}
+  {{- $scripts = $scripts | minify | fingerprint -}}
+{{- end -}}
+<script type="text/javascript">{{- $scripts.Content | safeJS -}}</script>
