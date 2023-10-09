@@ -63,4 +63,4 @@
 {{ with resources.Get "css/main.css" | resources.PostCSS (dict "inlineImports" true) | minify }}
   <style type="text/css">{{ .Content | safeCSS }}</style>
 {{ end }}
-
+<link href="/css/splide.min.css">

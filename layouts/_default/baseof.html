@@ -15,9 +15,13 @@
       {{ partial "hero" . }}
     {{ end }}
 
-  	<div class="lg:container lg:mx-auto lg:px-56 mt-10">
+    {{ if not .IsHome }}
+      <div class="lg:container lg:mx-auto lg:px-56 mt-10">
+        {{ block "main" . }}{{ end }}
+      </div>
+    {{ else }}
       {{ block "main" . }}{{ end }}
-    </div>
+    {{ end }}
 
     {{ partial "footer" . }}
 

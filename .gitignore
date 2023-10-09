@@ -4,3 +4,5 @@ resources/
 .hugo_build.lock
 lutheran-answers.code-workspace
 hugo_stats.json
+# Local Netlify folder
+.netlify
