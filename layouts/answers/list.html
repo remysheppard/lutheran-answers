@@ -1,8 +1,8 @@
 {{ define "main" }}
 
-	<h1 class="max-w-2xl">{{ .Title }}</h1>
+	<h1 class="text-center md:text-left max-w-2xl">{{ .Title }}</h1>
 
-	<div class="w-full p-5 lg:w-1/2 text-lg text-gray-500">
+	<div class="w-full lg:w-1/2 text-lg text-gray-500 text-center md:text-left">
 		{{ .Content }}
 	</div>
 
@@ -10,7 +10,7 @@
 
 		<h2 class="text-2xl text-gray-700 mt-7 mb-7 text-center sm:text-left">Answers by Topic</h2>
 
-		<section class="w-full flex flex-wrap flex-row">
+		<section class="w-full flex flex-wrap flex-row justify-center items-middle md:items-start md:justify-start">
 			{{ range $key, $value := .Site.Taxonomies.categories }}
 				<a href="{{ $.Site.BaseURL }}/categories/{{ $key | urlize }}" class="flex flex-row items-center bg-gray-200 shadow m-2 py-5 px-7 rounded-xl cursor-pointer hover:bg-white transition-all duration-200 hover:shadow-lg">
 					<svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 mr-2 inline" fill="none" viewBox="0 0 24 24" stroke="currentColor">

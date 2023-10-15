@@ -12,7 +12,7 @@
 {{- $avatar := $author.avatar | default "/images/authors/default.png" -}}
 {{- $avatar = ((resources.Get $avatar).Resize "150x150 webp q65") -}}
 
-<div class="overflow-hidden border-1 border-black hover:shadow-lg transition-all duration-300 rounded-lg h-90 w-2/3 sm:w-60 md:w-80 mx-auto sm:mr-5 sm:ml-0 mb-5 bg-gray-50 hover:bg-white" style="min-height:452px">
+<div class="overflow-hidden border-1 border-black hover:shadow-lg transition-all duration-300 rounded-lg h-90 w-2/3 sm:w-64 md:w-80 mx-auto sm:mr-5 sm:ml-0 mb-5 bg-gray-50 hover:bg-white" style="min-height:452px">
   <a href="{{ .Permalink }}" class="w-full block">
     <img alt="blog photo" src="{{ ($image.Resize "400x").RelPermalink }}" class="max-h-40 w-full object-cover"/>
   </a>

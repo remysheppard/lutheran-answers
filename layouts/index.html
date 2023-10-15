@@ -8,9 +8,9 @@
       {{ $image := resources.Get $imagePath }}
 
       <a href="{{ .Permalink }}" style="background-image:url('{{ ($image.Fill "1000x300 q65 webp").RelPermalink }}')" 
-        class="mySlides fade rounded-xl bg-cover w-full h-64 md:h-[500px] p-4 shadow bg-brand-red bg-blend-overlay flex flex-col justify-center align-middle transition-all duration-100">
-        <h4 class="uppercase text-xl text-white rounded-lg group-hover:bg-brand-yellow text-center mb-0 font-sans align-middle max-w-fit mx-auto bg-brand-red px-3 py-2">Latest Answers<h4>
-        <h3 class="text-center text-brand-black rounded-lg px-6 py-4 bg-brand-purple max-w-fit align-bottom text-5xl w-3/4 mx-auto">{{ .Title }}</h3>
+        class="mySlides fade rounded-xl bg-cover w-full h-64 md:h-[500px] p-4 shadow bg-brand-red bg-blend-overlay flex flex-col justify-around items-center transition-all duration-100">
+        <h4 class="uppercase text-sm md:text-xl text-white rounded-lg group-hover:bg-brand-yellow text-center mb-0 font-sans align-middle max-w-fit bg-brand-red px-3 py-2">Latest Answers</h4>
+        <h3 class="text-center text-brand-black rounded-lg px-4 md:px-6 py-2 md:py-4 bg-brand-purple max-w-[75%] align-bottom text-lg md:text-5xl inline">{{ .Title }}</h3>
       </a>
     {{ end }}
     <span id="prevButton" class="absolute left-4 top-[48%] px-4 py-2 rounded-full bg-white bg-opacity-50 hover:bg-opacity-100 hover:cursor-pointer"><i class="fa-sharp fa-solid fa-chevron-left"></i></span>
