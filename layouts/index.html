@@ -1,43 +1,69 @@
-{{ define "main" }}
+{{- define "main" -}}
 
   <!-- Slideshow container -->
   <div class="slideshow-container relative m-4 rounded group">
-    {{ range $index, $slide := first 6 (where site.RegularPages "Section" "eq" "answers") }}
+    {{- range $index, $slide := first 6 (where site.RegularPages "Section" "eq" "answers") -}}
 
-      {{ $imagePath := printf "images/%s/%s" .Page.Type .Params.feature }}
-      {{ $image := resources.Get $imagePath }}
+      {{- $imagePath := printf "images/%s/%s" .Page.Type .Params.feature -}}
+      {{- $image := resources.Get $imagePath -}}
 
-      <a href="{{ .Permalink }}" style="background-image:url('{{ ($image.Fill "1000x300 q65 webp").RelPermalink }}')" 
+      <a href="{{- .Permalink -}}" style="background-image:url('{{- ($image.Fill "1000x300 q65 webp").RelPermalink -}}')" 
         class="mySlides fade rounded-xl bg-cover w-full h-64 md:h-[500px] p-4 shadow bg-brand-red bg-blend-overlay flex flex-col justify-around items-center transition-all duration-100">
         <h4 class="uppercase text-sm md:text-xl text-white rounded-lg group-hover:bg-brand-yellow text-center mb-0 font-sans align-middle max-w-fit bg-brand-red px-3 py-2">Latest Answers</h4>
-        <h3 class="text-center text-brand-black rounded-lg px-4 md:px-6 py-2 md:py-4 bg-brand-purple max-w-[75%] align-bottom text-lg md:text-5xl inline">{{ .Title }}</h3>
+        <h3 class="text-center text-brand-black rounded-lg px-4 md:px-6 py-2 md:py-4 bg-brand-purple max-w-[75%] align-bottom text-lg md:text-5xl inline">{{- .Title -}}</h3>
       </a>
-    {{ end }}
+    {{- end -}}
     <span id="prevButton" class="absolute left-4 top-[48%] px-4 py-2 rounded-full bg-white bg-opacity-50 hover:bg-opacity-100 hover:cursor-pointer"><i class="fa-sharp fa-solid fa-chevron-left"></i></span>
     <span id="nextButton" class="absolute right-4 top-[48%] px-4 py-2 rounded-full bg-white bg-opacity-50 hover:bg-opacity-100 hover:cursor-pointer"><i class="fa-sharp fa-solid fa-chevron-right"></i></span>
   </div>
 
-
-
+  <!-- // { Answers } -->
   <div class="flex flex-col md:flex-row flex-wrap w-full justify-evenly mt-10">
-
-    {{ range $index, $element := first 1 (where site.RegularPages "Section" "eq" "blog") }}
-      
-      {{ $imagePath := printf "images/%s/%s" .Page.Type .Params.feature }}
-      {{ $image := resources.Get $imagePath }}
-
-      <a href="{{ .Permalink }}" style="background-image:url('{{ ($image.Fill "1000x500 q65 webp").RelPermalink }}')" class="bg-cover w-full mx-auto rounded-xl px-2 py-10 md:mx-5 my-10 h-64 shadow bg-gray-800 bg-blend-overlay flex flex-col justify-center hover:bg-gray-400 transition-all duration-100">
+    {{- range $index, $element := first 1 (where site.RegularPages "Section" "eq" "blog") -}}     
+      {{- $imagePath := printf "images/%s/%s" .Page.Type .Params.feature -}}
+      {{- $image := resources.Get $imagePath -}}
+      <a href="{{- .Permalink -}}" style="background-image:url('{{- ($image.Fill "1000x500 q65 webp").RelPermalink -}}')" class="bg-cover w-full mx-auto rounded-xl px-2 py-10 md:mx-5 my-10 h-64 shadow bg-gray-800 bg-blend-overlay flex flex-col justify-center hover:bg-gray-400 transition-all duration-100">
         <h4 class="uppercase text-red-300 text-center mb-0 font-sans" style="text-shadow:1px 1px 2px rgba(0,0,0,0.6)">From the blog</h4>
-        <h3 class="text-white text-center text-2xl w-3/4 mx-auto" style="text-shadow:1px 1px 2px rgba(0,0,0,0.6)">{{ .Title }}</h3>
+        <h3 class="text-white text-center text-2xl w-3/4 mx-auto" style="text-shadow:1px 1px 2px rgba(0,0,0,0.6)">{{- .Title -}}</h3>
+      </a>
+    {{- end -}}
+  </div>
+
+  <!-- // { Articles } -->
+  <div class="lg:container lg:mx-auto lg:px-56 mt-10">
+    <div class="flex flex-col mb-12">
+      <div class="flex flex-col md:flex-row items-center text-center md:items-baseline justify-between">
+        <h1 class="text-6xl font-bold text-gray-800 mb-4">{{- (site.GetPage "articles").Title -}}</h1>
+        <h3 class="text-3xl font-serif italic text-gray-600">{{- (site.GetPage "articles").Params.subtitle -}}</h3>
+      </div>
+      <div class="text-lg font-light text-gray-400 font-bold md:w-1/2">
+        {{- .Content -}}
+      </div>
+    </div>
+    <section class="w-full flex flex-col md:flex-row flex-wrap justify-start">
+      {{- range $index, $element := first 1 (where site.RegularPages "Section" "eq" "articles") -}}
+        {{ .Render "summary" }}
+      {{- end -}}
+    </section>
+  </div>
+
+    {{- range $index, $element := first 2 (where site.RegularPages "Section" "eq" "podcast") -}}
+      
+      {{- $imagePath := printf "images/%s/%s" .Page.Type .Params.feature -}}
+      {{- $image := resources.Get $imagePath -}}
+
+      <a href="{{- .Permalink -}}" style="background-image:url('{{- ($image.Resize "500x q65 jpg").RelPermalink -}}')" class="bg-cover h-52 w-full sm:w-1/3 mx-auto my-5 max-h-52 rounded-xl px-2 shadow bg-gray-800 bg-blend-overlay flex flex-col justify-center hover:bg-gray-400 transition-all duration-100">
+        <h4 class="uppercase text-red-300 text-center mb-0 font-sans" style="text-shadow:1px 1px 2px rgba(0,0,0,0.6)">Latest Podcast</h4>
+        <h3 class="text-white text-center text-2xl w-3/4 mx-auto" style="text-shadow:1px 1px 2px rgba(0,0,0,0.6)">{{- .Title -}}</h3>
       </a>
 
-    {{ end }}
+    {{- end -}}
 
   </div>
 
   <div class="lg:container lg:mx-auto lg:px-56 mt-10">
-    {{.Content}}
+    {{- .Content -}}
   </div>
 
 </div>
-{{ end }}
+{{- end -}}

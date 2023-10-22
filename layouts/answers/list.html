@@ -12,7 +12,7 @@
 
 		<section class="w-full flex flex-wrap flex-row justify-center items-middle md:items-start md:justify-start">
 			{{ range $key, $value := .Site.Taxonomies.categories }}
-				<a href="{{ $.Site.BaseURL }}/categories/{{ $key | urlize }}" class="flex flex-row items-center bg-gray-200 shadow m-2 py-5 px-7 rounded-xl cursor-pointer hover:bg-white transition-all duration-200 hover:shadow-lg">
+				<a href="{{ $.Site.BaseURL }}/categories/{{ $key | urlize }}" class="flex flex-row items-center bg-gray-200 border border-brand-black shadow m-2 py-5 px-7 rounded-xl cursor-pointer hover:bg-white transition-all duration-200 hover:shadow-lg">
 					<svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 mr-2 inline" fill="none" viewBox="0 0 24 24" stroke="currentColor">
 						<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 7v10a2 2 0 002 2h14a2 2 0 002-2V9a2 2 0 00-2-2h-6l-2-2H5a2 2 0 00-2 2z" />
 					</svg>

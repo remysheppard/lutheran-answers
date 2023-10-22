@@ -1,11 +1,11 @@
-{{ $backgroundImage := ((resources.Get "/images/baptism.jpg").Resize "1200x webp q60") }}
+{{ $backgroundImage := ((resources.Get site.Params.Hero.image).Resize "1200x webp q60") }}
 
 <div class="w-full bg-center bg-cover" style="background-image: url('{{- $backgroundImage.RelPermalink -}}');height: 25em;">
   <div class="flex items-center justify-around w-full h-full bg-gray-900 bg-opacity-50">
     <div class="text-left w-full md:w-1/2">
-      <h1 class="text-2xl font-semibold text-white uppercase lg:text-3xl mx-10 lg:mx-0 text-center">Lutheran Answers</h1>
+      <h1 class="text-2xl font-semibold text-white uppercase lg:text-3xl mx-10 lg:mx-0 text-center">{{ site.Params.Hero.title }}</h1>
 
-      <span class="text-center text-xl text-white lg:text-xl mx-10 lg:mx-0 capitalize block">{{ .Site.Params.description }}</span>
+      <span class="text-center text-xl text-white lg:text-xl mx-10 lg:mx-0 capitalize block">{{ .Site.Params.Hero.description }}</span>
 
      
 

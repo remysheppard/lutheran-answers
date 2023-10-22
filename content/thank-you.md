@@ -1,6 +1,5 @@
 ---
 title: Thank You!
-avoid: true
 ---
 
 # Thank you for reaching out!

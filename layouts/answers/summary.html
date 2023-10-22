@@ -12,23 +12,20 @@
 {{- $avatar := $author.avatar | default "/images/authors/default.png" -}}
 {{- $avatar = ((resources.Get $avatar).Resize "150x150 webp q65") -}}
 
-<div class="overflow-hidden border-1 border-black hover:shadow-lg transition-all duration-300 rounded-lg h-90 w-2/3 sm:w-64 md:w-80 mx-auto sm:mr-5 sm:ml-0 mb-5 bg-gray-50 hover:bg-white" style="min-height:452px">
+<div class="overflow-hidden border border-brand-purple hover:shadow-lg transition-all duration-300 rounded-lg h-90 w-2/3 sm:w-60 md:w-80 mx-auto sm:mr-5 sm:ml-0 mb-5 bg-gray-50 hover:bg-white" style="min-height:452px">
   <a href="{{ .Permalink }}" class="w-full block">
     <img alt="blog photo" src="{{ ($image.Resize "400x").RelPermalink }}" class="max-h-40 w-full object-cover"/>
   </a>
   <div class="w-full p-4 flex flex-col">
-    <p class="text-yellow-700 text-md font-medium mb-1">
-      {{ .Parent.Params.topic }}
-    </p>
-    <a href="{{ .Permalink }}" class="text-gray-800 text-xl font-medium mb-2">
+    <a href="{{ .Permalink }}" class="text-brand-red hover:underline text-xl font-medium mb-2">
       {{ .Title }}
     </a>
-    <p class="text-gray-400 font-light text-md">
+    <p class="text-brand-black font-light text-md">
       {{ .Description }}
     </p>
     <div class="flex items-center align-bottom">
       <a href="{{ $author.url }}" target="_blank" class="block relative">
-        <img alt="profil" src="{{- $avatar.RelPermalink -}}" class="mx-auto object-cover rounded-full h-10 w-10 p-0 m-0"/>
+        <img alt="profil" src="{{ $avatar.RelPermalink }}" class="mx-auto object-cover rounded-full h-10 w-10 p-0 m-0"/>
       </a>
       <div class="flex flex-col justify-between ml-5 text-sm">
         <a href="{{ $author.url }}" target="_blank" class="text-gray-800 m-0 p-0">

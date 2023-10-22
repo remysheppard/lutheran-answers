@@ -5,6 +5,11 @@ taxonomies:
   category: categories
   tag: tags
 
+permalinks:
+  page:
+    articles: /articles/:year/:month/:title/
+  section:
+    articles: /articles/
 
 markup:
   goldmark:
@@ -17,6 +22,11 @@ params:
   donate: 'https://newsletter.lutherananswers.com/products/tip-jar'
 
   image: /images/16-9-image.png
+
+  Hero:
+    image: /images/baptism.jpg
+    title: Lutheran Answers
+    description: Your Questions About The Faith, Answered.
   
 
 menu:
@@ -52,24 +62,31 @@ menu:
       pre: '<i class="fa-light fa-books mr-2"></i>'
 
   meta:
+    - indentifier: about
+      name: About
+      url: /about
+      weight: 1
+      pre: ''
+      post: ''
+
     - identifier: ask
       name: Ask
       url: /ask
-      weight: 1
+      weight: 2
       pre: ''
       post: ' a Question'
 
     - identifier: corrections
       name: Correction
       url: /correction
-      weight: 2
+      weight: 3
       pre: 'Submit a '
       post: ''
 
     - identifier: legal
       name: Legal
       url: /policies
-      weight: 3
+      weight: 4
       pre: ''
       post: ''
 
@@ -77,7 +94,7 @@ menu:
 ## Hugo Caching thing for TailWindCSS - I do not understand it.
 module:
   hugoVersion:
-    extended: false
+    extended: true
     min: 0.118.2
   mounts:
     - source: assets
