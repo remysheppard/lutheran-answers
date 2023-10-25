@@ -2,7 +2,7 @@
 title: The End of The World!?
 description: Human beings are a bunch of superstitious weirdos. And we get worse when you start adding in spirituality.
 author: remy
-feature: pope.png
+feature: israel-hamas.png
 categories: 
 - Catholicism
 - End Times
