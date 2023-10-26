@@ -1,11 +1,10 @@
 ---
 title: The End of The World!?
-description: Human beings are a bunch of superstitious weirdos. And we get worse when you start adding in spirituality.
+description: You will hear of wars and rumors of wars. Nation will rise against nation, and kingdom against kingdom. There will be famines and earthquakes in various places. All these are the beginning of birth pains.
 author: remy
 feature: israel-hamas.png
 categories: 
 - Catholicism
-- End Times
 - Eschatology
 tags: 
 - Israel
@@ -17,10 +16,6 @@ tags:
 - Prophecy
 date: 2023-10-25
 ---
-
-> You will hear of wars and rumors of wars. Nation will rise against nation, and kingdom against kingdom. There will be famines and earthquakes in various places. All these are the beginning of birth pains.
-> 
-> <small>- Matthew 24:6-8</small>
 
 The Israel-Hamas conflict has been raging on for a little over two weeks now and the grifters are in no short supply, let me tell you!
 If you don't know, I spend a fair amount of time on X promoting the podcast and chatting about theology (It's a good time, except when it's not). In the last two weeks I have seen dozens of advertisements about rebuilding the temple, red heifers, and the end times.
