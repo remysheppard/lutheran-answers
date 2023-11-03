@@ -25,9 +25,9 @@ Keeping these things in mind, we can look at *The Mark* and understand it to be 
 
 The Mark is mentioned in the 13th chapter of Revelation, verses sixteen through eighteen:
 
->>Also it causes all, both small and great, both rich and poor, both free and slave, to be marked on the right hand or the forehead, so that no one can buy or sell unless he has the mark, that is, the name of the beast or the number of its name. This calls for wisdom: let the one who has understanding calculate the number of the beast, for it is the number of a man, and his number is 666.
->>
->>[Revelation 13:16-18](https://biblia.com/bible/esv/revelation/13/16-18)
+> Also it causes all, both small and great, both rich and poor, both free and slave, to be marked on the right hand or the forehead, so that no one can buy or sell unless he has the mark, that is, the name of the beast or the number of its name. This calls for wisdom: let the one who has understanding calculate the number of the beast, for it is the number of a man, and his number is 666.
+> 
+> [Revelation 13:16-18](https://biblia.com/bible/esv/revelation/13/16-18)
 
 A lot of people read this passage and immediately jump to a literal sign of some sort that is literally on your actual forehead or right hand that marks you as owned by satan.
 
@@ -75,18 +75,19 @@ I point this out because I don't want you to think that getting a vaccine will s
 
 The people who read the scripture here overly litterally are very, very quick to point out that the mark must be a literal, physical thing. Those same people will immediately jump out of rigid literalism and into allegorical interpretation when you point out that no one injects a vaccine into their right hand. 
 
-		"Well romans considered the entire arm the hand".
+"Well romans considered the entire arm the hand".
 
 **No. They didn't.**
 
 And these mental gymnastics continue forever:
+
 * **What about people who got the vaccine in their left arm, then?**
 
- 		"Oh, well right hand just means 'place of authority' in the Bible...."
+"Oh, well right hand just means 'place of authority' in the Bible...."
  	
 * **No one gets a vaccine in their forhead**
 
- 		"Oh, well that just means they... decided... to get it... with their... hearts?"
+"Oh, well that just means they... decided... to get it... with their... hearts?"
 
 This is probably my least favorite aspect of American Evangelicalism: The absolute lack of hermeneutical consistency. Things are literal when they support their views, and allegorical when they do not, and their main interpretive device is some random right-wing conspiracy blogger who claims a <a href="https://www.deccanchronicle.com/lifestyle/viral-and-trending/100918/bible-prophecy-first-red-heifer-born-in-2000-years-signals-end-of-days.html" target="_blank" rel="nofollow">red heifer was just born in palestine</a> for the first time millennia (even though they're born every single day, and *red* doesn't refer to color, but to ritualistic state). It's frustrating.
 

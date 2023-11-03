@@ -4,6 +4,7 @@ module.exports = {
     require('@tailwindcss/forms'),		
 		require('@tailwindcss/typography'),
     require('tailwindcss-brand-colors'),
+		require('tailwind-container-break-out'),
 	],
 	theme: {
 		extend: {

@@ -48,17 +48,23 @@ menu:
       url: /answers
       weight: 2
       pre: '<i class="fa-sharp fa-light fa-seal-question mr-2"></i>'
+    
+    - identifier: articles
+      name: Articles
+      url: /articles
+      weight: 3
+      pre: '<i class="fa-light fa-memo-pad"></i>'
 
     - identifier: shop
       name: Shop
       url: https://lutherananswers.gumroad.com
-      weight: 3
+      weight: 4
       pre: '<i class="fa-light fa-bag-shopping mr-2"></i>'
 
     - indentifier: boc
       name: Confessions
       url: https://www.lutheranconfessions.org
-      weight: 4
+      weight: 5
       pre: '<i class="fa-light fa-books mr-2"></i>'
 
   meta:

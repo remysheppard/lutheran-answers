@@ -17,9 +17,9 @@
     <span id="nextButton" class="absolute right-4 top-[48%] px-4 py-2 rounded-full bg-white bg-opacity-50 hover:bg-opacity-100 hover:cursor-pointer"><i class="fa-sharp fa-solid fa-chevron-right"></i></span>
   </div>
 
-  <!-- // { Answers } -->
+  <!-- // { blog } -->
   <div class="flex flex-col md:flex-row flex-wrap w-full justify-evenly mt-10">
-    {{- range $index, $element := first 1 (where site.RegularPages "Section" "eq" "blog") -}}     
+    {{- range $index, $element := first 6 (where site.RegularPages "Section" "eq" "blog") -}}     
       {{- $imagePath := printf "images/%s/%s" .Page.Type .Params.feature -}}
       {{- $image := resources.Get $imagePath -}}
       <a href="{{- .Permalink -}}" style="background-image:url('{{- ($image.Fill "1000x500 q65 webp").RelPermalink -}}')" class="bg-cover w-full mx-auto rounded-xl px-2 py-10 md:mx-5 my-10 h-64 shadow bg-gray-800 bg-blend-overlay flex flex-col justify-center hover:bg-gray-400 transition-all duration-100">
@@ -41,7 +41,7 @@
       </div>
     </div>
     <section class="w-full flex flex-col md:flex-row flex-wrap justify-start">
-      {{- range $index, $element := first 1 (where site.RegularPages "Section" "eq" "articles") -}}
+      {{- range $index, $element := first 6 (where site.RegularPages "Section" "eq" "articles") -}}
         {{ .Render "summary" }}
       {{- end -}}
     </section>
