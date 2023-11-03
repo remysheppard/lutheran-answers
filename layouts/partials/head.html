@@ -21,8 +21,16 @@
   {{ printf `<link rel="%s" type="%s" href="%s" title="%s">` .Rel .MediaType.Type .Permalink $.Site.Title | safeHTML }}
 {{ end }}
 
+{{ $imagePath := "" }}
+{{ with .Params.feature }}
+  {{ $imagePath = printf "images/**/%s" . }}
+{{ else }}
+  {{ $imagePath = "/images/16-9-image.png" }}
+{{ end }}
 
-{{- $feature := ((resources.Get "/images/16-9-image.png").Resize "1600x900 webp q50") -}}
+{{ $image := resources.GetMatch $imagePath }}
+
+{{- $feature := ($image.Resize "1600x900 webp q50") -}}
 
 <!-- Twitter Card -->
 <meta name="twitter:card" content="summary_large_image">
