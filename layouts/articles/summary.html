@@ -4,8 +4,8 @@
     {{ .Scratch.Set "readingTime" "minute" }}
 {{ end }}
 
-{{ $imagePath := printf "images/articles/%s" .Params.feature }}
-{{ $image := resources.Get $imagePath }}
+{{ $imagePath := printf "images/**/%s" .Params.feature }}
+{{ $image := resources.GetMatch $imagePath }}
 
 {{ $author := index .Site.Data.authors .Params.author }}
 

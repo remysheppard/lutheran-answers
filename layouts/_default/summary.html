@@ -9,7 +9,7 @@
 
 {{ $author := index .Site.Data.authors .Params.author }}
 
-{{- $avatar := $author.avatar | default "/images/**/default.png" -}}
+{{- $avatar := $author.avatar | default "/images/authors/default.png" -}}
 {{- $avatar = ((resources.GetMatch $avatar).Resize "150x150 webp q65") -}}
 
 <div class="overflow-hidden border border-brand-purple hover:shadow-lg transition-all duration-300 rounded-lg h-90 w-2/3 sm:w-60 md:w-80 mx-auto sm:mr-5 sm:ml-0 mb-5 bg-gray-50 hover:bg-white" style="min-height:452px">
