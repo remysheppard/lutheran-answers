@@ -43,6 +43,17 @@
       </span>
     {{ end }}
 
+    {{ with .Params.submit }}
+      <span class="flex justify-between text-lg italic font-serif m-5 md:mb-10 md:mt-[-1.25rem] md:mx-20">
+        <p>
+          <i class="fa-sharp fa-light fa-block-question"></i> Question submitted by {{ . }}.
+        </p>
+        <p>
+          Have a question? <a href="/ask/" class="text-brand-red underline">Click here to ask</a>!
+        </p>
+      </span>
+    {{ end }}
+
       <div class="w-full lg:w-2/3 px-2 lg:px-0 mx-auto flex flex-col">
         <div class="w-full mt-4 pt-4 sm:mt-0 text-xl">
           {{ .Content }}
