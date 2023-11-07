@@ -249,6 +249,7 @@
       "md:mt-[-1.25rem]",
       "md:mx-0",
       "md:mx-20",
+      "md:mx-break-out",
       "md:my-10",
       "md:pl-0",
       "md:px-6",
