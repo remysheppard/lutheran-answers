@@ -44,7 +44,7 @@
     {{ end }}
 
     {{ with .Params.submit }}
-      <span class="flex justify-between text-lg italic font-serif m-5 md:mb-10 md:mt-[-1.25rem] md:mx-20">
+      <span class="flex justify-between text-lg italic font-serif m-5 md:mt-[-1.25rem] md:mx-20">
         <p>
           <i class="fa-sharp fa-light fa-block-question"></i> Question submitted by {{ . }}.
         </p>
@@ -54,10 +54,16 @@
       </span>
     {{ end }}
 
+    <div class="w-full lg:w-2/3 px-2 lg:px-0 mx-auto mb-5">
+      {{ partial "social-share" . }}
+    </div>
+
       <div class="w-full lg:w-2/3 px-2 lg:px-0 mx-auto flex flex-col">
-        <div class="w-full mt-4 pt-4 sm:mt-0 text-xl">
+        <div class="w-full mt-4 pt-4 sm:mt-0 text-xl indent-8">
           {{ .Content }}
         </div>
+
+        {{ partial "newsletter-inline" . }}
 
         <hr class="break">
 
@@ -66,6 +72,10 @@
         <hr class="break">
 
         {{ partial "author-block" . }}
+
+        {{ with .Params.comments }}
+          {{ partial "comment-system" . }}
+        {{ end }}
 
       </div>
     </div>

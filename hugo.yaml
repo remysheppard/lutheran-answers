@@ -27,7 +27,12 @@ params:
     image: /images/baptism.jpg
     title: Lutheran Answers
     description: Your Questions About The Faith, Answered.
+    primary_button: Consider Giving
+    primary_button_url: #
+    secondary_button: See Some Answers!
+    secondary_button_url: /answers/
   
+  comments: true
 
 menu:
   main:

@@ -58,7 +58,9 @@
 
         <hr class="break">
 
-        {{ template "_internal/disqus.html" . }}
+        {{ with .Params.comments }}
+          {{ partial "comment-system" . }}
+        {{ end }}
 
         <hr class="break">
 
