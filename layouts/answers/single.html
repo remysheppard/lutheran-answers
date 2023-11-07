@@ -73,9 +73,7 @@
 
         {{ partial "author-block" . }}
 
-        {{ with .Params.comments }}
-          {{ partial "comment-system" . }}
-        {{ end }}
+        {{ partial "comment-system" . }}
 
       </div>
     </div>
