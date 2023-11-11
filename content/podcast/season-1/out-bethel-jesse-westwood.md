@@ -1,6 +1,6 @@
 ---
 title: "Out Bethel Jesse Westwood"
-date: 2021-07-12T06:00:00-04:00
+date: 2023-07-02
 feature: bethel.png
 length: 78   # In Minutes, round up.
 description: I sit down for an interview with Jesse Westwood, a former worship leader from Bethel Church.

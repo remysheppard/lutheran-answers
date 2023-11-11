@@ -1,6 +1,6 @@
 ---
 title: "Self Improvement w/ Rev. Fisk"
-date: 2021-07-19T06:00:00-04:00
+date: 2023-07-03
 feature: fisk.png
 length: 65   # In Minutes, round up.
 description: I was blessed enough to be able to sit down for an hour with Reverend Jonathan Fisk and interview him about self-improvement and Christianity.

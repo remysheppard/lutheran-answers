@@ -1,6 +1,6 @@
 ---
 title: "Vicarage, with Don Stein"
-date: 2021-08-16T06:00:00-04:00
+date: 2023-07-05
 feature: baby-baptism.png
 length: 78 # In Minutes, round up.
 description: I got to sit down with My Friend Don and discuss what his vicarage was like (among other things).

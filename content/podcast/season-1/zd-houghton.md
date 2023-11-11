@@ -1,6 +1,6 @@
 ---
 title: "A Conversation with Z.D. Houghton"
-date: 2021-08-09T06:00:48-04:00
+date: 2023-07-04
 feature: luther-bible.png
 length: 80 # In Minutes, round up.
 description: An interview with ZD Houghton his path to Lutheranism.

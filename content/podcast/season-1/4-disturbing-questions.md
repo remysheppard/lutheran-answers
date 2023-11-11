@@ -1,6 +1,6 @@
 ---
 title: "4 Questions No Christian Can Answer"
-date: 2021-07-05T06:33:50-04:00
+date: 2023-07-01
 feature: literally-chad.jpg
 length: 55   # In Minutes, round up.
 description: Ride along with @Literally_Chad and myself as we explore Tim Sledge's silly little booklet.
