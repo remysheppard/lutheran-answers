@@ -29,7 +29,7 @@
         <h2 class="title-font font-medium text-brand-yellow uppercase tracking-widest text-sm mb-3">Topics</h2>
         <nav class="list-none mb-10">
           <!-- make sure you limit this range later lol -->
-          {{- range .Site.Taxonomies.categories -}}
+          {{- range first 6 .Site.Taxonomies.categories.ByCount -}}
             <li>
               <a href="{{ .Page.Permalink }}" class="capitalize text-white hover:text-brand-purple">
                 {{ .Page.Title }}

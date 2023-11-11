@@ -1,0 +1,24 @@
+{{- $destination := "" -}}
+{{- $wide := false -}}
+{{- if in .Destination "#wide" -}}
+  {{- $destination = (substr .Destination 0 -5) -}}
+  {{- $wide = true -}}
+{{- else -}}
+  {{- $destination = .Destination -}}
+{{- end -}}
+
+{{- $image := printf "images/**/%s" $destination -}}
+{{- $image = resources.GetMatch $image -}}
+{{- with $image -}}
+{{- $large := $image.Resize "1200x webp q80" -}}
+{{ $medium := $large.Fill "726x402" -}}
+{{ $small := $medium.Fill "458x254" -}}
+<figure{{ if $wide }} class="mx-break-out"{{ end }}>
+    <img alt="{{ $.Text }}" loading="lazy" class="rounded-lg shadow-md" srcset="
+        {{ $small.RelPermalink }} 458w,
+        {{ $medium.RelPermalink }} 726w,
+        {{ $large.RelPermalink }} 1200w" sizes="50vw" src="{{ $small.RelPermalink }}" />
+    <figcaption class="text-center text-sm italic">{{ with $.Title | safeHTML }}{{ . }}{{ end }}</figcaption>
+</figure>
+{{- else -}}
+<img src="{{ .Destination | safeURL }}" alt="{{ $.Text }}" />{{- end -}}

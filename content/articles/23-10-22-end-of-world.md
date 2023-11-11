@@ -20,8 +20,7 @@ date: 2023-10-25
 The Israel-Hamas conflict has been raging on for a little over two weeks now and the grifters are in no short supply, let me tell you!
 If you don't know, I spend a fair amount of time on X promoting the podcast and chatting about theology (It's a good time, except when it's not). In the last two weeks I have seen dozens of advertisements about rebuilding the temple, red heifers, and the end times.
 
-{{< image "articles/plankton.jpg" "Resize" "800x webp q80" >}}
-<small class="text-center text-sm italic">Darn You, Martin Luther!</small>
+![Plankton from Spongebob Yelling At The Sky](/articles/plankton.jpg "Darn You, Martin Luther!")
 
 And there’s absolutely no end to the end times marketing niche! You have prosperity heretics telling you how to live your best life in the tribulation; you have fear-mongering preachers telling you that if you give to them they’ll send you a special DVD box set on how to survive the tribulation; you have survivalists and others teaching you how to prep!
 It’s all just nuts!

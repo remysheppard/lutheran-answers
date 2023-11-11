@@ -18,8 +18,12 @@
       <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
       <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
       </svg>
-      &nbsp;{{ .ReadingTime }} {{ .Scratch.Get "readingTime" }}
-    </span>
+      {{ with .Params.length }}
+        &nbsp;{{ . }} Minutes
+      {{ else }}     
+        &nbsp;{{ .ReadingTime }} {{ .Scratch.Get "readingTime" }}
+      {{ end }}
+      </span>
 
     <span class="inline-flex flex-row">
       <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -63,3 +67,9 @@
     </p>
   </span>
 {{ end }}
+
+{{ with .Params.audio }}
+  <div id="buzzsprout-player-13380033"></div>
+  <script async defer src="https://www.buzzsprout.com/2231277/{{ . }}.js?container_id=buzzsprout-player-13380033&player=small" type="text/javascript" charset="utf-8"></script>
+  <hr class="spacer">
+  {{ end }}

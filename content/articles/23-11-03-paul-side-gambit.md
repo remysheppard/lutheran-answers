@@ -48,6 +48,8 @@ The second definition of *ἀπόστολος* is the one pertaining to the Apos
 
 The extraordinary status of the Apostles of Jesus Christ, a status that did not apply to ordinary apostles, is that they could speak on behalf of Jesus because Jesus gave them that extraordinary level of authority. Therefore, to receive them is to receive Jesus Himself. This, of course, explains why the writings of the Apostles of Jesus Christ became part of the scriptures. What they said and wrote had the same authority as the writings of the prophets of the Old Testament.
 
+{{< newsletter >}}
+
 ## Was Paul and Ordinary Apostle or an Extraordinary Apostle?
 
 A quick survey of of Paul's epistles reveals a consistent pattern that is unmistakable, Paul constantly referred to himself as an apostle of Jesus Christ, and by doing so he not only assumed that he was an extraordinary apostle he intentionally communicated that he was an extraordinary apostle and was writing with the authority of Jesus.
