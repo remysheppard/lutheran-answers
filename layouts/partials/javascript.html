@@ -2,7 +2,8 @@
 {{- $jsSlider := resources.Get "js/slider.js" -}}
 
 {{- $scripts := slice $jsNavigation $jsSlider | resources.Concat "js/main.js" -}}
+{{- $scripts = $scripts | js.Build | fingerprint -}}
 {{- if hugo.IsProduction -}}
-  {{- $scripts = $scripts | minify | fingerprint -}}
+  {{- $scripts = $scripts | minify -}}
 {{- end -}}
 <script type="text/javascript">{{- $scripts.Content | safeJS -}}</script>

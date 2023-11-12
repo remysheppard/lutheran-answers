@@ -6,3 +6,4 @@ lutheran-answers.code-workspace
 hugo_stats.json
 # Local Netlify folder
 .netlify
+.vscode

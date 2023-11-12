@@ -1,4 +1,4 @@
-{{ $backgroundImage := ((resources.Get site.Params.Hero.image).Resize "1200x webp q60") }}
+{{/* $backgroundImage := ((resources.Get site.Params.Hero.image).Resize "1200x webp q60") }}
 
 <div class="w-full bg-center bg-cover" style="background-image: url('{{- $backgroundImage.RelPermalink -}}');height: 25em;">
   <div class="flex items-center justify-around w-full h-full bg-gray-900 bg-opacity-50">
@@ -11,4 +11,44 @@
 
     </div>
   </div>
-</div>
+</div>*/}}
+
+<section id="image-carousel" class="splide mx-auto h-[300px] my-4 w-full md:w-[1200px] my-10 rounded-xl shadow-lg" aria-label="Beautiful Images">
+  <div class="splide__track">
+		<ul class="splide__list">
+
+			{{- range site.Params.Hero -}}
+
+				{{- $image := printf "images/**/%s" .image -}}
+				{{- $image = resources.GetMatch $image -}}
+				{{- $image = $image.Fill "1200x300 webp q80" -}}
+
+				<li class="splide__slide" class="mx-auto">
+					<a href="{{ .big_link }}">
+						<img src="{{- $image.RelPermalink -}}" alt="" class="w-full rounded-xl">
+					</a>
+				</li>
+			{{- end -}}
+
+			{{ $p := slice }}
+			{{ range (slice "articles" "podcast" "answers") }}
+				{{ $p = $p | append (index (where site.RegularPages "Section" . | first 1) 0) }}
+			{{ end }}
+
+			{{ range $p.ByDate }}
+
+				{{- $image := printf "images/**/%s" .Params.feature -}}
+				{{- $image = resources.GetMatch $image -}}
+				{{- $image = ($image.Fill "1200x300 q80 webp") -}}
+
+				<li class="splide__slide" class="mx-auto">
+					<a href="{{ .Permalink }}">
+						<img src="{{- $image.RelPermalink -}}" alt="{{ .Title }}" class="w-full rounded-xl">
+					</a>
+				</li>
+
+			{{ end }}
+
+		</ul>
+  </div>
+</section>

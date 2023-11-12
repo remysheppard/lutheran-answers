@@ -24,13 +24,15 @@ params:
   image: /images/16-9-image.png
 
   Hero:
-    image: /images/baptism.jpg
-    title: Lutheran Answers
-    description: Your Questions About The Faith, Answered.
-    primary_button: Consider Giving
+  - image: table-talk.png
+    title: #
+    description: #
+    big_link: https://newsletter.lutherananswers.com/products/table-talk
+    primary_button: #
     primary_button_url: #
-    secondary_button: See Some Answers!
-    secondary_button_url: /answers/
+    secondary_button: #
+    secondary_button_url: #
+
   
   comments: true
 
@@ -112,6 +114,8 @@ module:
       target: assets
     - source: hugo_stats.json
       target: assets/watching/hugo_stats.json
+    - source: node_modules/@splidejs/splide/dist/css
+      target: assets/css/splide
 build:
   writeStats: true
   cachebusters:
