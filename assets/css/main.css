@@ -4,7 +4,7 @@
 
 @tailwind utilities;
 
-@import './splide/splide.min.css'
+@import './splide/themes/splide-default.min.css'
 
 @layer base {
 	h1, h2, h3, h4 {

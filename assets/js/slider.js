@@ -6,3 +6,17 @@ new Splide( '#image-carousel', {
   autoplay   : true,
   rewind     : true,
 } ).mount();
+
+new Splide( '#card-carousel', {
+  perPage    : 3,
+  breakpoints: {
+    640: {
+      perPage: 1,
+    },
+  },
+  type       : 'loop',
+  autoplay   : true,
+  arrows     : false,
+  perMove    : 1,
+  pagination : false,
+} ).mount();

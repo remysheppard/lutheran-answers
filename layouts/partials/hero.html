@@ -13,7 +13,7 @@
   </div>
 </div>*/}}
 
-<section id="image-carousel" class="splide mx-auto h-[300px] my-4 w-full md:w-[1200px] my-10 rounded-xl shadow-lg" aria-label="Beautiful Images">
+<section id="image-carousel" class="splide mx-auto md:h-[400px] my-4 w-11/12 md:w-[1200px] my-10 rounded-xl shadow-lg" aria-label="Beautiful Images">
   <div class="splide__track">
 		<ul class="splide__list">
 
@@ -21,11 +21,11 @@
 
 				{{- $image := printf "images/**/%s" .image -}}
 				{{- $image = resources.GetMatch $image -}}
-				{{- $image = $image.Fill "1200x300 webp q80" -}}
+				{{- $image = $image.Fill "1200x400 webp q80" -}}
 
 				<li class="splide__slide" class="mx-auto">
 					<a href="{{ .big_link }}">
-						<img src="{{- $image.RelPermalink -}}" alt="" class="w-full rounded-xl">
+						<img src="{{- $image.RelPermalink -}}" alt="{{ .Title }}" class="w-full rounded-xl">
 					</a>
 				</li>
 			{{- end -}}
@@ -39,7 +39,7 @@
 
 				{{- $image := printf "images/**/%s" .Params.feature -}}
 				{{- $image = resources.GetMatch $image -}}
-				{{- $image = ($image.Fill "1200x300 q80 webp") -}}
+				{{- $image = ($image.Fill "1200x400 q80 webp") -}}
 
 				<li class="splide__slide" class="mx-auto">
 					<a href="{{ .Permalink }}">
