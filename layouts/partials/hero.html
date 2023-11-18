@@ -21,7 +21,7 @@
 
 				{{- $image := printf "images/**/%s" .image -}}
 				{{- $image = resources.GetMatch $image -}}
-				{{- $image = $image.Fill "1200x400 webp q80" -}}
+				{{- $image = $image.Resize "1200x400 webp q80" -}}
 
 				<li class="splide__slide" class="mx-auto">
 					<a href="{{ .big_link }}">

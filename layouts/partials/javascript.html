@@ -1,12 +1,10 @@
-{{- $jsNavigation := resources.Get "js/navigation.js" -}}
-{{- $jsSlider := resources.Get "js/slider.js" -}}
-
-{{- $scripts := slice $jsSlider $jsNavigation | resources.Concat "js/main.js" -}}
-{{- $scripts = $scripts | js.Build -}}
+{{- $scripts := resources.Get "js/slider.js" | js.Build -}}
 {{- if hugo.IsProduction -}}
   {{- $scripts = $scripts | minify -}}
 {{- end -}}
-<script type="text/javascript">{{- $scripts.Content | safeJS -}}</script>
+{{ if .IsHome }}
+  <script type="text/javascript">{{- $scripts.Content | safeJS -}}</script>
+{{ end }}
 <script type="text/javascript">
   function openNav() {
     document.getElementById("mySidenav").style.width = "450px";

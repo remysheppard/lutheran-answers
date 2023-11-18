@@ -42,7 +42,7 @@ menu:
       name: Home
       url: /
       weight: 1
-      pre: '<i class="fa-light fa-house"></i>'
+      pre: '<i class="fa-light fa-house mr-2"></i>'
 
     - identifier: podcast
       name: Podcast
@@ -60,7 +60,7 @@ menu:
       name: Articles
       url: /articles
       weight: 3
-      pre: '<i class="fa-light fa-memo-pad"></i>'
+      pre: '<i class="fa-light fa-memo-pad mr-2"></i>'
 
     - identifier: shop
       name: Shop

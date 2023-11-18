@@ -1,22 +1,23 @@
 {{ if gt .ReadingTime 1 }}
-    {{ .Scratch.Set "readingTime" "minutes" }}
+  {{ .Scratch.Set "readingTime" "minutes" }}
 {{ else }}
-    {{ .Scratch.Set "readingTime" "minute" }}
+  {{ .Scratch.Set "readingTime" "minute" }}
 {{ end }}
 
-{{ $imagePath := printf "images/**/%s" .Params.feature }}
-{{ $image := resources.GetMatch $imagePath }}
+{{ $image := printf "images/**/%s" .Params.feature }}
+{{ $image = resources.GetMatch $image }}
+{{ $image = $image.Fill "400x225 webp q70" }}
 
 {{ $author := index .Site.Data.authors .Params.author }}
 
 {{- $avatar := $author.avatar | default "/images/authors/default.png" -}}
-{{- $avatar = ((resources.GetMatch $avatar).Resize "150x150 webp q65") -}}
+{{- $avatar = ((resources.Get $avatar).Resize "150x150 webp q65") -}}
 
-<div class="overflow-hidden border border-brand-purple hover:shadow-lg transition-all duration-300 rounded-lg h-90 w-2/3 sm:w-60 md:w-80 mx-auto sm:mr-5 sm:ml-0 mb-5 bg-gray-50 hover:bg-white" style="min-height:452px">
+<div class="overflow-hidden border flex flex-col border-brand-purple hover:shadow-lg transition-all duration-300 rounded-lg h-90 w-2/3 sm:w-60 md:w-80 mx-auto sm:mr-5 sm:ml-0 mb-5 bg-gray-50 hover:bg-white" style="min-height:452px">
   <a href="{{ .Permalink }}" class="w-full block">
-    <img alt="blog photo" src="{{ ($image.Resize "400x").RelPermalink }}" class="max-h-40 w-full object-cover"/>
+    <img alt="blog photo" src="{{ $image.RelPermalink }}" class="max-h-40 w-full object-cover"/>
   </a>
-  <div class="w-full p-4 flex flex-col">
+  <div class="w-full p-4 flex flex-col h-full">
     <div class="flex flex-row justify-left">
       {{ range first 3 .Params.categories }}
         <span class="bg-brand-yellow rounded-lg mr-2 text-sm font-medium mb-1 text-white px-2">
@@ -30,9 +31,9 @@
     <p class="text-brand-black font-light text-md">
       {{ .Description }}
     </p>
-    <div class="flex items-center align-bottom">
+    <div class="flex items-center align-bottom mt-auto">
       <a href="{{ $author.url }}" target="_blank" class="block relative">
-        <img alt="profil" src="{{ $avatar.RelPermalink }}" class="mx-auto object-cover rounded-full h-10 w-10 p-0 m-0"/>
+        <img alt="{{ $author.name }}'s Avatar" src="{{ $avatar.RelPermalink }}" class="mx-auto object-cover rounded-full h-10 w-10 p-0 m-0"/>
       </a>
       <div class="flex flex-col justify-between ml-5 text-sm">
         <a href="{{ $author.url }}" target="_blank" class="text-gray-800 m-0 p-0">
