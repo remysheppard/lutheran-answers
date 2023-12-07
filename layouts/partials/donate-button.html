@@ -1,8 +1,13 @@
 <a 
-  href="{{ .Site.Params.donate }}" 
+  href="{{ .Site.Params.donate.link }}" 
   target="_blank" 
   class="py-2 px-5 rounded transition duration-200 
          bg-gradient-to-r from-brand-yellow via-yellow-400 hover:via-brand-yellow to-brand-yellow hover:to-yellow-500 shadow text-white 
          transition-all duration-200 my-5 lg:my-0 lg:mx-4">
-  Donate
+  {{ with .Site.Params.donate.icon }}
+    {{ . | safeHTML }}
+  {{ end }}
+  {{ with .Site.Params.donate.text }}
+    {{ . | markdownify }}
+  {{ end }}
 </a>

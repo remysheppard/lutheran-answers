@@ -19,15 +19,19 @@ markup:
 params:
   description: 'Your questions about the Christian faith, answered.'
   author: Remy Sheppard
-  donate: 'https://newsletter.lutherananswers.com/products/tip-jar'
+  
+  donate:
+    text: Support Us!
+    link: https://www.patreon.com/lutherananswers
+    icon: <i class="fa-brands fa-patreon"></i>
 
   image: /images/16-9-image.png
 
   Hero:
-  - image: table-talk.png
-    title: Join Table Talk Today!
+  - image: patreon.png
+    title: #
     description: #
-    big_link: https://newsletter.lutherananswers.com/products/table-talk
+    big_link: https://www.patreon.com/lutherananswers
     primary_button: #
     primary_button_url: #
     secondary_button: #
