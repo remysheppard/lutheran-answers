@@ -21,7 +21,7 @@ params:
   author: Remy Sheppard
   
   donate:
-    text: Support Us!
+    text: Patreon
     link: https://www.patreon.com/lutherananswers
     icon: <i class="fa-brands fa-patreon"></i>
 
@@ -68,7 +68,7 @@ menu:
 
     - identifier: shop
       name: Shop
-      url: https://lutherananswers.gumroad.com
+      url: https://lutherananswers.creator-spring.com
       weight: 4
       pre: '<i class="fa-light fa-bag-shopping mr-2"></i>'
 

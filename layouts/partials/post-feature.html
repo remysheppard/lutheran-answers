@@ -7,6 +7,7 @@
 {{ $author := index .Site.Data.authors .Params.author }}
 
 {{ $image := printf "images/**/%s" .Params.feature }}
+
 {{ $image = (resources.GetMatch $image).Resize "1200x webp q80" }}
 
 <div class="md:mx-break-out md:rounded-lg overflow-hidden bg-cover shadow flex flex-col items-start justify-end align-bottom pb-5 pl-5 h-[{{ $image.Height }}px]" style="background-image:linear-gradient(180deg, rgba(0,0,0,0), #2a1a1f),url('{{ $image.RelPermalink }}')">
