@@ -28,6 +28,15 @@ params:
   image: /images/16-9-image.png
 
   Hero:
+  - image: merch-sale-10p.png
+    title: #
+    description: #
+    big_link: https://lutherananswers.creator-spring.com/
+    primary_button: #
+    primary_button_url: #
+    secondary_button: #
+    secondary_button_url: #
+
   - image: patreon.png
     title: #
     description: #
