@@ -1,12 +1,12 @@
 {{ define "main" }}
 
-  <section class="w-full text-brand-black body-font">
+  <section class="w-full text-brand-black dark:text-slate-100 body-font">
     <div class=" mx-auto flex flex-col">
       
       {{- partial "post-feature" . -}}
 
       <div class="w-full lg:w-2/3 px-2 lg:px-0 mx-auto flex flex-col">
-        <div class="w-full mt-4 pt-4 sm:mt-0 text-xl prose indent-8">
+        <div class="w-full mt-4 pt-4 sm:mt-0 text-xl prose dark:prose-invert indent-8">
           {{ .Content }}
         </div>
 

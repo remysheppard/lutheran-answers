@@ -1,23 +1,23 @@
-<div id="mySidenav" class="sidenav h-screen w-0 fixed z-40 top-0 right-0 overflow-x-hidden transition-all duration-200 pt-12 bg-gray-300 shadow" style="max-width:100vw;">
-  <a href="javascript:void(0)" class="closebtn absolute top-0 right-5 text-6xl ml-20" onclick="closeNav()">&times;</a>
+<div id="mySidenav" class="sidenav h-screen w-0 fixed z-40 top-0 right-0 overflow-x-hidden transition-all duration-200 pt-12 bg-gray-300 dark:bg-slate-600 shadow" style="max-width:100vw;">
+  <a href="javascript:void(0)" class="closebtn absolute top-0 right-5 text-6xl ml-20 text-black dark:text-white" onclick="closeNav()">&times;</a>
   
 
 
   {{ range .Site.Menus.main }}
-    <a href="{{ .URL }}" class="text-gray-800 text-center lg:text-left font-bold transition transition-all duration-200 hover:bg-gray-100 block hover:shadow p-6 md:w-3/4 md:rounded-r-full">
+    <a href="{{ .URL }}" class="text-gray-800 dark:text-slate-100 text-center lg:text-left font-bold transition transition-all duration-200 hover:bg-gray-100 dark:hover:bg-slate-400 block hover:shadow p-6 md:w-3/4 md:rounded-r-full">
       {{ .Pre }} {{ .Name }}
     </a>
   {{ end }}
 
-  <hr class="my-10 w-9/12 mx-auto bg-gradient-to-r from-transparent to-transparent via-black h-px border-none">
+  <hr class="my-10 w-9/12 mx-auto bg-gradient-to-r from-transparent to-transparent via-black dark:via-slate-100 h-px border-none">
 
   <div class="flex justify-around flex-wrap w-full">
     {{ range .Site.Menus.meta }}
-      <a href="{{ .URL }}" class="text-gray-800 text-center rounded transition font-bold transition-all duration-200 hover:bg-gray-100 inline-block w-1/4 m-2 hover:shadow p-3">{{ .Name }}</a>
+      <a href="{{ .URL }}" class="text-gray-800 dark:text-slate-100 text-center rounded transition font-bold transition-all duration-200 hover:bg-gray-100 dark:hover:bg-slate-400 inline-block w-1/4 m-2 hover:shadow p-3">{{ .Name }}</a>
     {{ end }}
   </div>
 
-  <hr class="my-10 w-9/12 mx-auto bg-gradient-to-r from-transparent to-transparent via-black h-px border-none">
+  <hr class="my-10 w-9/12 mx-auto bg-gradient-to-r from-transparent to-transparent via-black dark:via-slate-100 h-px border-none">
 
   <div class="my-5 text-center">
     {{ partial "donate-button" . }}

@@ -26,7 +26,7 @@
 		@apply mb-5
 	}
 	blockquote {
-		@apply italic md:mx-break-out text-sm bg-gray-200 !text-brand-red !border-brand-yellow !border !border-l-4 rounded-md px-4 py-2 my-4 shadow-md
+		@apply italic md:mx-break-out text-sm bg-gray-200 dark:bg-slate-900 !text-brand-red dark:!text-brand-purple !border-brand-yellow !border !border-l-4 rounded-md px-4 py-2 my-4 shadow-md
 	}
 }
 
@@ -61,11 +61,11 @@ img.emoji {
 }
 
 *::-webkit-scrollbar-track {
-	@apply shadow-inner bg-brand-purple rounded-full
+	@apply shadow-inner bg-brand-purple rounded-full dark:bg-slate-600
 }
 
 *::-webkit-scrollbar {
-  @apply w-2 bg-brand-purple
+  @apply w-2 bg-brand-purple dark:bg-slate-600
 }
 
 *::-webkit-scrollbar-thumb {

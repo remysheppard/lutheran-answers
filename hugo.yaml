@@ -22,9 +22,9 @@ params:
   author: Remy Sheppard
   
   donate:
-    text: Patreon
-    link: https://www.patreon.com/lutherananswers
-    icon: <i class="fa-brands fa-patreon"></i>
+    text: Donate
+    link: https://newsletter.lutherananswers.com/products/tip-jar
+    icon: <i class="fa-light fa-dove"></i> #<i class="fa-duotone fa-circle-heart"></i>
 
   image: /images/16-9-image.png
 
@@ -37,16 +37,6 @@ params:
     primary_button_url: #
     secondary_button: #
     secondary_button_url: #
-
-  - image: patreon.png
-    title: #
-    description: #
-    big_link: https://www.patreon.com/lutherananswers
-    primary_button: #
-    primary_button_url: #
-    secondary_button: #
-    secondary_button_url: #
-
   
   comments: true
 

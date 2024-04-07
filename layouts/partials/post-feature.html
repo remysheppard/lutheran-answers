@@ -13,7 +13,7 @@
 <div class="md:mx-break-out md:rounded-lg overflow-hidden bg-cover shadow flex flex-col items-start justify-end align-bottom pb-5 pl-5 h-[{{ $image.Height }}px]" style="background-image:linear-gradient(180deg, rgba(0,0,0,0), #2a1a1f),url('{{ $image.RelPermalink }}')">
 
   <h1 class="text-white">{{ .Title }}</h1>
-  <div class="w-full md:w-6/12 flex flex-row justify-evenly lg:justify-between text-brand-yellow">
+  <div class="w-full md:w-6/12 flex flex-row justify-evenly lg:justify-between text-gray-50">
 
     <span class="inline-flex flex-row">
       <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -56,6 +56,8 @@
   <span class="block text-2xl md:text-3xl m-5 md:my-10 md:mx-20 font-serif italic text-brand-red">
     {{ . }}
   </span>
+{{ else }}
+  <hr class="spacer">
 {{ end }}
 
 {{ with .Params.submit }}
@@ -73,4 +75,4 @@
   <div id="buzzsprout-player-13380033"></div>
   <script async defer src="https://www.buzzsprout.com/2231277/{{ . }}.js?container_id=buzzsprout-player-13380033&player=small" type="text/javascript" charset="utf-8"></script>
   <hr class="spacer">
-  {{ end }}
+{{ end }}

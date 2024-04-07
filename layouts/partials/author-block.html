@@ -8,7 +8,7 @@
 <div class="w-full md:w-4/5 my-5 flex flex-col pl-5 md:pl-0 md:flex-row">
   <img src="{{- $avatar.RelPermalink -}}" height="150" width="150" alt="{{ $author.name }}" class="rounded-full ring-4 ring-brand-purple shadow mb-5 mr-5 h-32 w-32">
   <span class="inline-flex flex-col">
-    <h4 class="text-lg mb-0 font-sans font-semibold">
+    <h4 class="text-lg mb-0 font-sans font-semibold dark:text-slate-300">
       {{- with $author.name -}}
         {{- . -}}
       {{- else -}}
@@ -57,7 +57,7 @@
 
     </span>
     {{- with $author.bio -}}
-      <p class="font-semibold text-brand-black">{{- . | markdownify -}}</p>
+      <p class="font-semibold text-brand-black dark:text-slate-300">{{- . | markdownify -}}</p>
     {{- end -}}
   </span>
 </div>
