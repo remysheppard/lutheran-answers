@@ -2,22 +2,23 @@
 
 <div class="flex flex-col mb-12">
   <div class="flex flex-col md:flex-row items-center text-center md:items-baseline justify-between">
-    <h1 class="text-6xl font-bold text-gray-800 dark:text-gray-100 mb-4">{{ .Title }}</h1>
-    <h3 class="text-3xl font-serif italic text-gray-600 dark:text-gray-300">{{ .Params.subtitle }}</h3>
+    <h1 class="text-6xl font-bold text-gray-800 dark:text-gray-100 mb-4">{{ $.Title }}</h1>
+    <h3 class="text-3xl font-serif italic text-gray-600 dark:text-gray-300">{{ $.Params.subtitle }}</h3>
   </div>
   <div class="text-lg font-light text-gray-400 font-bold md:w-1/2">
     {{ .Content }}
   </div>
 </div>
-<section class="w-full flex flex-col md:flex-row flex-wrap justify-start">
+<section class="w-full flex flex-col md:flex-row flex-wrap justify-around">
 
   {{ $pages := where .Site.RegularPages "Section" "podcast" }}
   {{ $pages = $pages.ByDate.Reverse }}
   {{ range (.Paginate $pages 9).Pages }}
     {{ .Render "summary" }}
   {{ end }}
-  {{ partial "pagination" . }}
 
 </section>
+
+{{ partial "pagination" . }}
 
 {{ end }}

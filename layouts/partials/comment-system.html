@@ -1,11 +1,13 @@
-<h3>Leave A Comment!</h3>
+<h3 class="dark:text-slate-100">Leave A Comment!</h3>
 
-<div id="cusdis_thread"
-  data-host="https://cusdis.com"
-  data-app-id="a2edb6bc-7fc9-4c3f-b9f5-84fc3f3266ff"
-  data-page-id="{{ .File.UniqueID }}"
-  data-page-url="{{ .Permalink }}"
-  data-page-title="{{ .Title }}"
-></div>
-<script async defer src="https://cusdis.com/js/cusdis.es.js"></script>
-<script defer data-host="https://cusdis.com" data-app-id="a2edb6bc-7fc9-4c3f-b9f5-84fc3f3266ff" src="https://cusdis.com/js/cusdis-count.umd.js"></script>
+<section class="dark:!text-slate-100">
+  <div id="cusdis_thread"
+    data-host="https://cusdis.com"
+    data-app-id="a2edb6bc-7fc9-4c3f-b9f5-84fc3f3266ff"
+    data-page-id="{{ .File.UniqueID }}"
+    data-page-url="{{ .Permalink }}"
+    data-page-title="{{ .Title }}"
+  ></div>
+  <script async defer src="https://cusdis.com/js/cusdis.es.js"></script>
+  <script defer data-host="https://cusdis.com" data-app-id="a2edb6bc-7fc9-4c3f-b9f5-84fc3f3266ff" src="https://cusdis.com/js/cusdis-count.umd.js"></script>
+</section>
