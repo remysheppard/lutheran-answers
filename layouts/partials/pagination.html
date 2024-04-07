@@ -1,7 +1,7 @@
 {{ if gt .Paginator.TotalPages 1 }}
-	<div class="flex w-full items-center justify-center">
+	<div class="flex mx-auto items-center justify-center mt-4">
 		{{ if .Paginator.HasPrev }}
-			<a href="{{ .Paginator.Prev.URL }}" class="flex items-center px-4 py-2 mx-1 text-gray-500 bg-white rounded-md cursor-not-allowed">
+			<a href="{{ .Paginator.Prev.URL }}" class="flex items-center px-4 py-2 mx-1 text-slate-500 dark:text-slate-100 transition-colors duration-200 shadow transform bg-white dark:bg-slate-700 rounded-md hover:bg-slate-700 dark:hover:bg-slate-600 hover:text-white">
 				<svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
 	  			<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
 				</svg>
@@ -9,13 +9,13 @@
 		{{ end }}
 
 		{{ range .Paginator.Pagers }}
-			<a href="{{ .URL }}" class="flex items-center px-4 py-2 mx-1 text-gray-700 transition-colors duration-200 shadowtransform bg-white rounded-md hover:bg-gray-700 hover:text-white">
+			<a href="{{ .URL }}" class="flex items-center px-4 py-2 mx-1 text-slate-500 dark:text-slate-100 transition-colors duration-200 shadow transform bg-white dark:bg-slate-700 rounded-md hover:bg-slate-700 dark:hover:bg-slate-600 hover:text-white">
 				{{ .PageNumber }}
 			</a>
 		{{ end }}
 
 		{{ if .Paginator.HasNext }}
-			<a href="{{ .Paginator.Next.URL }}" class="flex items-center px-4 py-2 mx-1 text-gray-700 transition-colors duration-200 transform bg-white rounded-md hover:bg-indigo-600 hover:text-white">
+			<a href="{{ .Paginator.Next.URL }}" class="flex items-center px-4 py-2 mx-1 text-slate-500 dark:text-slate-100 transition-colors duration-200 shadow transform bg-white dark:bg-slate-700 rounded-md hover:bg-slate-700 dark:hover:bg-slate-600 hover:text-white">
 				<svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
 				  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
 				</svg>
