@@ -10,7 +10,7 @@ categories:
 - Reforming Faith
 tags: 
 - Pentecostalism
-- Refromed
+- Reformed
 - Anglicanism
 ---
 

@@ -13,7 +13,7 @@ Why, then, do we believe that the pope is the antichrist? Well, it is a pretty n
 
 Rather, we believe that *the office of the papacy* is, itself, ***anti-Christ***. That is to say, the office of the pope is against Christ. This is because of Catholic teaching which places the pope as the fount and head of all church authority - instead of Christ - and sets him up to be a mediator between us and Jesus. 
 
-The Lord tells us through the Apostle Paul in his first letter to Timothy, "For there is one God, and there is one mediator between God and men, the man Christ Jesus [...]" (1 Tim 2:5). The Roman Catholic Church says, essentially, "And that's true, but there is a mediator between man and Chist and that is The Pope."
+The Lord tells us through the Apostle Paul in his first letter to Timothy, "For there is one God, and there is one mediator between God and men, the man Christ Jesus [...]" (1 Tim 2:5). The Roman Catholic Church says, essentially, "And that's true, but there is a mediator between man and Christ and that is The Pope."
 
 Now what's funny is the Catholic church holds this position - that one must be a part of the Roman church - to be saved, but they also hold to the opposite position and believe that one need not even be a Christian to be saved. Indeed, they say that as long as you strive to live the best life you can, your life will be pleasing to God and you will be granted entrance to Heaven. I've even heard a Catholic priest say that one could be an atheist, vehemently denying the Lord Jesus, and still gain entrance into Heaven by living to their best interpretation of morality.
 
