@@ -10,7 +10,6 @@ permalinks:
     articles: /articles/:year/:month/:title/
   section:
     articles: /articles/
-    # podcast: /podcast/
 
 markup:
   goldmark:

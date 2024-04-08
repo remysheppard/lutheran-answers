@@ -1,0 +1,15 @@
+{{ $ref := .Get "href" }}
+{{ $target := "" }}
+{{ with $ref }}
+  {{ $target = "_blank" }}
+{{ end }}
+{{ with .Get "relref" }}
+  {{ $ref = relref $ . }}
+{{ end }}
+<a 
+  {{ with $ref }}href="{{.}}" {{ end }} 
+  {{ with $target }} target="{{.}}"{{ if eq $target "_blank" }} rel="noreferrer"{{ end }}{{ end }} 
+  class="px-4 py-1 font-bold bg-brand-red dark:bg-brand-purple text-white dark:text-brand-black rounded-full mx-2 hover:shadow-md
+        {{ with .Get "class" }} {{ . }}{{ end }}">
+    {{- .Inner | safeHTML | markdownify -}}
+</a>
