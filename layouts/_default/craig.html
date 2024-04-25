@@ -22,35 +22,47 @@
 </div>
 
 <script>
-    // JavaScript logic to handle chat interaction
-    const chatBox = document.getElementById('chat-box');
-    const userInput = document.getElementById('user-input');
 
-    userInput.addEventListener('keydown', function(event) {
-        if (event.key === 'Enter') {
-            const userMessage = userInput.value.trim();
-            if (userMessage !== '') {
-                appendMessage('user', userMessage);
-                respondToUser();
-                userInput.value = '';
-            }
+const chatBox = document.getElementById("chat-box"),
+    userInput = document.getElementById("user-input");
+
+const responses = [
+    "Go ask your pastor!",
+    "I'm not sure, you should read your Bible.",
+    "You know, there's probably a Lutheran Answers episode about that....",
+    "Honestly? I have no clue! LOL",
+    "This probably has nothing to do with your question, but have you read this Bible verse before? Reformed guys hate it: John 3:16: For God so loved the world, that he gave his only begotten Son...",
+    "I'm the most advanced AI on earth. I have an IQ of 104 (that's four points higher than the maximum!). I have no idea what you're asking.",
+    "I don't know about that, but I do know this one secret saying of Athanasius that Roman Catholics hate: The holy and inspired Scriptures are sufficient for the preaching of the truth."
+];
+
+userInput.addEventListener("keydown", function (e) {
+    if (e.key === "Enter") {
+        const inputText = userInput.value.trim();
+        if (inputText !== "") {
+            appendMessage("user", inputText);
+            respondToUser();
+            userInput.value = "";
         }
-    });
-
-    function appendMessage(sender, message) {
-        const messageElement = document.createElement('div');
-        messageElement.className = `mb-2 text-sm ${sender === 'user' ? 'text-right' : 'text-left'}`;
-        messageElement.textContent = message;
-        chatBox.appendChild(messageElement);
-        chatBox.scrollTop = chatBox.scrollHeight; // Auto-scroll to bottom
     }
+});
 
-    function respondToUser() {
-        const response = "Go ask your pastor.";
-        setTimeout(() => {
-            appendMessage('bot', response);
-        }, 500); // Simulate bot typing delay
-    }
+function appendMessage(role, text) {
+    const messageDiv = document.createElement("div");
+    messageDiv.className = `mb-2 text-sm ${role === "user" ? "text-right" : "text-left"}`;
+    messageDiv.textContent = text;
+    chatBox.appendChild(messageDiv);
+    chatBox.scrollTop = chatBox.scrollHeight;
+}
+
+function respondToUser() {
+    const randomIndex = Math.floor(Math.random() * responses.length);
+    const response = responses[randomIndex];
+    setTimeout(() => {
+        appendMessage("bot", response);
+    }, 700);
+}
+  
 </script>
 
 </article>
