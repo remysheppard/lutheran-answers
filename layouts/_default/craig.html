@@ -3,10 +3,20 @@
 {{ $img := resources.Get "images/big-craig.png" }}
 {{ $img = $img.Resize "500x webp q90" }}
 
+{{ $userAvatar := resources.Get "images/user-avatar.png" }}
+{{ $userAvatar = $userAvatar.Resize "100x webp q90" }}
+
+{{ $bigCraig := $img.Resize "100x webp q90" }}
+
+{{ $responses := index .Site.Data "big-craig" }}
+
 <article class="text-brand-black dark:text-white">
-  <section class="flex flex-row justify-between">
-    <img src="{{ $img.RelPermalink }}" class="rounded" height="250">
-    <div class="ml-10">
+  <section class="flex flex-col md:flex-row justify-between w-11/12 mx-auto">
+    <div class="flex flex-col w-full md:w-1/2">
+      <img src="{{ $img.RelPermalink }}" class="rounded">
+      <span class="italic text-xs mt-1">Big Craig is not actually an AI</span>
+    </div>
+    <div class="ml-10 w-full md:w-1/2">
       <h2 class="text-brand-black dark:text-brand-purple">{{ .Title | markdownify }}</h3>
       <h3 class="text-brand-black dark:text-white">{{ .Params.subtitle | markdownify }}</h3>
       <p>
@@ -15,11 +25,10 @@
     </div>
   </section>
 
-
   <div class="p-6 my-10">
-    <div id="chat-box" class="h-40 overflow-y-auto mb-4"></div>
+    <div id="chat-box" class="min-h-40 h-auto max-h-72 overflow-y-auto mb-4 border border-brand-red rounded-lg p-10 flex flex-col w-full"></div>
     <input id="user-input" type="text" class="border bg-transparent border-gray-300 rounded-lg px-3 py-2 w-full focus:outline-none focus:border-blue-500" placeholder="Please type a question - the more specific the better!">
-</div>
+  </div>
 
 <script>
 
@@ -27,14 +36,12 @@ const chatBox = document.getElementById("chat-box"),
     userInput = document.getElementById("user-input");
 
 const responses = [
-    "Go ask your pastor!",
-    "I'm not sure, you should read your Bible.",
-    "You know, there's probably a Lutheran Answers episode about that....",
-    "Honestly? I have no clue! LOL",
-    "This probably has nothing to do with your question, but have you read this Bible verse before? Reformed guys hate it: John 3:16: For God so loved the world, that he gave his only begotten Son...",
-    "I'm the most advanced AI on earth. I have an IQ of 104 (that's four points higher than the maximum!). I have no idea what you're asking.",
-    "I don't know about that, but I do know this one secret saying of Athanasius that Roman Catholics hate: The holy and inspired Scriptures are sufficient for the preaching of the truth."
-];
+
+    {{ range $responses.responses }}
+      "{{ . }}",
+    {{ end }}
+
+  ];
 
 userInput.addEventListener("keydown", function (e) {
     if (e.key === "Enter") {
@@ -48,12 +55,28 @@ userInput.addEventListener("keydown", function (e) {
 });
 
 function appendMessage(role, text) {
-    const messageDiv = document.createElement("div");
-    messageDiv.className = `mb-2 text-sm ${role === "user" ? "text-right" : "text-left"}`;
-    messageDiv.textContent = text;
-    chatBox.appendChild(messageDiv);
-    chatBox.scrollTop = chatBox.scrollHeight;
+  const messageElement = document.createElement('div');
+  messageElement.className = `flex align-center items-end ${role === 'user' ? 'justify-start' : 'justify-end'}`;
+
+  const avatarElement = document.createElement('img');
+  avatarElement.src = role === 'user' ? '{{ $userAvatar.RelPermalink }}' : '{{ $bigCraig.RelPermalink }}';
+  avatarElement.alt = 'Avatar';
+  avatarElement.className = `rounded-full mx-2`;
+  avatarElement.style = `${role === 'user' ? 'order:-999;height:50px;width:auto' : 'order:999;height:50px;width:auto' }`;
+
+
+  const messageContent = document.createElement('p');
+  messageContent.className = `mb-2 text-sm rounded shadow text-black px-4 py-2 ${role === 'user' ? 'bg-white mr-auto' : 'ml-auto bg-brand-purple'}`;
+  messageContent.style = 'width:fit-content;max-width:60%';
+  messageContent.textContent = text;
+
+  messageElement.appendChild(avatarElement);
+  messageElement.appendChild(messageContent);
+
+  chatBox.appendChild(messageElement);
+  chatBox.scrollTop = chatBox.scrollHeight;
 }
+
 
 function respondToUser() {
     const randomIndex = Math.floor(Math.random() * responses.length);
