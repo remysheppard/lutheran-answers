@@ -1,0 +1,58 @@
+{{ define "main" }}
+
+{{ $img := resources.Get "images/big-craig.png" }}
+{{ $img = $img.Resize "500x webp q90" }}
+
+<article class="text-brand-black dark:text-white">
+  <section class="flex flex-row justify-between">
+    <img src="{{ $img.RelPermalink }}" class="rounded" height="250">
+    <div class="ml-10">
+      <h2 class="text-brand-black dark:text-brand-purple">{{ .Title | markdownify }}</h3>
+      <h3 class="text-brand-black dark:text-white">{{ .Params.subtitle | markdownify }}</h3>
+      <p>
+        {{ .Content }}
+      </p>
+    </div>
+  </section>
+
+
+  <div class="p-6 my-10">
+    <div id="chat-box" class="h-40 overflow-y-auto mb-4"></div>
+    <input id="user-input" type="text" class="border bg-transparent border-gray-300 rounded-lg px-3 py-2 w-full focus:outline-none focus:border-blue-500" placeholder="Please type a question - the more specific the better!">
+</div>
+
+<script>
+    // JavaScript logic to handle chat interaction
+    const chatBox = document.getElementById('chat-box');
+    const userInput = document.getElementById('user-input');
+
+    userInput.addEventListener('keydown', function(event) {
+        if (event.key === 'Enter') {
+            const userMessage = userInput.value.trim();
+            if (userMessage !== '') {
+                appendMessage('user', userMessage);
+                respondToUser();
+                userInput.value = '';
+            }
+        }
+    });
+
+    function appendMessage(sender, message) {
+        const messageElement = document.createElement('div');
+        messageElement.className = `mb-2 text-sm ${sender === 'user' ? 'text-right' : 'text-left'}`;
+        messageElement.textContent = message;
+        chatBox.appendChild(messageElement);
+        chatBox.scrollTop = chatBox.scrollHeight; // Auto-scroll to bottom
+    }
+
+    function respondToUser() {
+        const response = "Go ask your pastor.";
+        setTimeout(() => {
+            appendMessage('bot', response);
+        }, 500); // Simulate bot typing delay
+    }
+</script>
+
+</article>
+
+{{ end }}
