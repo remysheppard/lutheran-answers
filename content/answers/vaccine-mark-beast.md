@@ -37,7 +37,7 @@ But it probably isn't.
 
 ### The Mark of the Lord
 
-The mark of the beast, mentioned in Revelation 13, is a direct contast against the earlier *<a href="https://biblia.com/bible/esv/revelation/7/2-3" target="_blank" data-toggle="tooltip" data-placement="top" title="Revelation 7:2 & 3">Seal of the Lord</a>* on the forehead of the elect. The Lord marks us as his own in our baptisms. We are sealed by the Holy Spirit, who is <a href="https://biblia.com/bible/esv/ephesians/1/13-14" data-toggle="tooltip" data-placement="right" title="Ephesians 1:13 & 14" target="_blank">the collateral we get until the day we are finally saved</a>.
+The mark of the beast, mentioned in Revelation 13, is a direct contrast against the earlier *<a href="https://biblia.com/bible/esv/revelation/7/2-3" target="_blank" data-toggle="tooltip" data-placement="top" title="Revelation 7:2 & 3">Seal of the Lord</a>* on the forehead of the elect. The Lord marks us as his own in our baptisms. We are sealed by the Holy Spirit, who is <a href="https://biblia.com/bible/esv/ephesians/1/13-14" data-toggle="tooltip" data-placement="right" title="Ephesians 1:13 & 14" target="_blank">the collateral we get until the day we are finally saved</a>.
 
 By way of contrast, the beast also has a seal - The Mark.
 
@@ -47,7 +47,7 @@ This deserves its own article, but for now it will suffice to say that the Mark 
 
 ## Why the Vaccine isn't the Mark
 
-Lutheran teaching and doctrine surrounding the Mark of the Beast advocates the same position that scripture advocates: That it will be something willingly taken by those who *are not saved*. I phrase it this way *specifically* to dispell doubt. 
+Lutheran teaching and doctrine surrounding the Mark of the Beast advocates the same position that scripture advocates: That it will be something willingly taken by those who *are not saved*. I phrase it this way *specifically* to dispel doubt. 
 
 The mark will be taken by those deceived, but it is important to note that the deception is not about the mark or its nature. Rather, the deception is about the disposition of their own soul. The deceived, in this case, are specifically deceived about their salvation. 
 
@@ -73,7 +73,7 @@ I point this out because I don't want you to think that getting a vaccine will s
 
 ### No Forehead Vaccines
 
-The people who read the scripture here overly litterally are very, very quick to point out that the mark must be a literal, physical thing. Those same people will immediately jump out of rigid literalism and into allegorical interpretation when you point out that no one injects a vaccine into their right hand. 
+The people who read the scripture here overly literally are very, very quick to point out that the mark must be a literal, physical thing. Those same people will immediately jump out of rigid literalism and into allegorical interpretation when you point out that no one injects a vaccine into their right hand. 
 
 "Well romans considered the entire arm the hand".
 
@@ -85,7 +85,7 @@ And these mental gymnastics continue forever:
 
 "Oh, well right hand just means 'place of authority' in the Bible...."
  	
-* **No one gets a vaccine in their forhead**
+* **No one gets a vaccine in their forehead**
 
 "Oh, well that just means they... decided... to get it... with their... hearts?"
 
