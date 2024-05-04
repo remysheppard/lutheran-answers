@@ -1,11 +1,11 @@
 ---
 title: Pr. Joe on Ministry, Vicarage, & Fellowship
-date: 2024-07-26
+date: 2023-07-26
 feature: joe.png
 length: 69 # In Minutes, round up.
 description: I tricked my pastor into coming on my podcast.
 author: remy
-audio: 
+audio: 13390069-pr-joe-on-ministry-vicarage-fellowship
 categories:
 - Interview
 tags: 
