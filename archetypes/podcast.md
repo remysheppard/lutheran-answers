@@ -1,7 +1,7 @@
 ---
 title: 
 date: yyyy-mm-dd
-feature: 
+feature: default.png
 length:  # In Minutes, round up.
 description: 
 author: remy
@@ -11,3 +11,9 @@ categories:
 tags: 
 - 
 ---
+
+a
+
+### Watch the video of this interview!
+
+{{< youtube x >}}

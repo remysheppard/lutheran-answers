@@ -1,59 +1,43 @@
 {{- define "main" -}}
 
-<h2>Content Tagged&nbsp;{{- .Title -}}</h2>
+<h1 class="text-center md:text-left max-w-2xl dark:text-slate-100">Content Tagged&nbsp;{{- .Title -}}</h1>
 
-<section class="w-full flex flex-col md:flex-row flex-wrap justify-start">
-  {{- range .RegularPages -}}
+<div class="w-full lg:w-1/2 text-lg text-gray-500 dark:text-slate-400 text-center md:text-left">
+  {{ .Content }}
+</div>
 
-    {{- if gt .ReadingTime 1 -}}
-        {{- .Scratch.Set "readingTime" "minutes" -}}
-    {{- else -}}
-        {{- .Scratch.Set "readingTime" "minute" -}}
-    {{- end -}}
+{{ if .Parent.IsHome }}
 
-    {{- $image := printf "/images/**/%s" .Params.feature -}}
-    {{- $image = (resources.GetMatch $image).Resize "400x webp q80" -}}
+  <h2 class="text-2xl text-gray-700 dark:text-slate-100 mt-7 mb-7 text-center sm:text-left">Answers by Topic</h2>
 
-    {{- $author := index .Site.Data.authors .Params.author -}}
-
-    {{- $avatar := $author.avatar | default "/images/authors/default.png" -}}
-    {{- $avatar = ((resources.Get $avatar).Resize "150x150 webp q65") -}}
-
-    <div class="overflow-hidden border-1 border-black hover:shadow-lg transition-all duration-300 rounded-lg h-90 w-2/3 sm:w-60 md:w-80 mx-auto sm:mr-5 sm:ml-0 mb-5 bg-gray-50 hover:bg-white" style="min-height:452px">
-      <a href="{{- .Permalink -}}" class="w-full block">
-        <img alt="blog photo" src="{{- $image.RelPermalink -}}" class="max-h-40 w-full object-cover"/>
+  <section class="w-full flex flex-wrap flex-row justify-center items-middle md:items-start md:justify-start">
+    {{ range $key, $value := .Site.Taxonomies.categories }}
+      <a href="{{ $.Site.BaseURL }}/categories/{{ $key | urlize }}" class="flex flex-row items-center dark:text-slate-300 bg-gray-200 dark:bg-slate-900 border border-brand-black shadow m-2 py-5 px-7 rounded-xl cursor-pointer hover:bg-white dark:hover:bg-slate-700 transition-all duration-200 hover:shadow-lg">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 mr-2 inline" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 7v10a2 2 0 002 2h14a2 2 0 002-2V9a2 2 0 00-2-2h-6l-2-2H5a2 2 0 00-2 2z" />
+        </svg>
+        {{ $key | humanize }}
       </a>
-      <div class="w-full p-4 flex flex-col">
-        <p class="text-yellow-700 text-md font-medium mb-1">
-          {{- .Parent.Params.topic -}}
-        </p>
-        <a href="{{- .Permalink -}}" class="text-gray-800 text-xl font-medium mb-2">
-          {{- .Title -}}
-        </a>
-        <p class="text-gray-400 font-light text-md">
-          {{- .Description -}}
-        </p>
-        <div class="flex items-center align-bottom">
-          <a href="{{- $author.url -}}" target="_blank" class="block relative">
-            <img alt="profil" src="{{- $avatar.RelPermalink -}}" class="mx-auto object-cover rounded-full h-10 w-10 p-0 m-0"/>
-          </a>
-          <div class="flex flex-col justify-between ml-5 text-sm">
-            <a href="{{- $author.url -}}" target="_blank" class="text-gray-800 m-0 p-0">
-              {{- with $author.name -}}
-                {{- . -}}
-              {{- else -}}
-                {{- .Params.author -}}
-              {{- end -}}
-            </a>
-            <p class="text-gray-400 m-0 p-0">
-              {{- .Date.Format "January 2, 2006" -}} - {{- .ReadingTime -}} {{- .Scratch.Get "readingTime" -}}
-            </p>
-          </div>
-        </div>
-      </div>
-    </div>
-    
-  {{- end -}}
-
+    {{ end }}
   </section>
+
+  <h2 class="text-2xl text-gray-700 dark:text-slate-300 mt-14 text-center sm:text-left">Browse All Answers</h2>
+  
+  <section class="w-full flex flex-col md:flex-row flex-wrap justify-start">
+    {{ range .RegularPagesRecursive }}
+      {{ .Render "summary" }}
+    {{ end }}
+  </section>
+
+{{ else }}
+
+  <section class="w-full flex flex-col md:flex-row sm:flex-wrap justify-center sm:justify-start">
+    {{ range .Pages }}
+      {{ .Render "summary" }}
+    {{ end }}
+  </section>
+
+{{ end }}
+
+{{ partial "pagination.html" . }}
 {{- end -}}
