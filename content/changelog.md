@@ -2,6 +2,13 @@
 title: Website Changelog
 ---
 
+#### Website Version 1.6
+** This build is aimed at 100% pagespeed on mobile.**
+
+* Made slider images responsive.  
+  *This resulted in some layout hiccups that I've addressed. Honestly not sure about doing the rest of the site right now. It's kind of involved.*
+* Lazy Loaded slider images.
+
 #### Website Version 1.5.2
 * Changed podcasts layout  
   *New layout includes seasons automatically through recursive directory magic.*

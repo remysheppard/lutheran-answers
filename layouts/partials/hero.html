@@ -13,21 +13,36 @@
   </div>
 </div>*/}}
 
-<section id="image-carousel" class="splide mx-auto md:h-[400px] my-4 w-11/12 md:w-[1200px] my-10 rounded-xl shadow-lg" aria-label="Beautiful Images">
+<section id="image-carousel" class="splide mx-auto w-11/12 md:w-[1200px] my-10 rounded-xl shadow-lg" aria-label="Home Page Slider">
   <div class="splide__track">
 		<ul class="splide__list">
+
+			{{- $sizes := slice "320" "640" "960" "1280" "1600" "1920" -}}
+			
 
 			{{- range site.Params.Hero -}}
 
 				{{- $image := printf "images/**/%s" .image -}}
 				{{- $image = resources.GetMatch $image -}}
-				{{- $image = $image.Resize "1200x400 webp q80" -}}
+				{{- $imageMobile := $image.Resize "300x100 webp q80" -}}
 
 				<li class="splide__slide" class="mx-auto">
 					<a href="{{ .big_link }}">
-						<img src="{{- $image.RelPermalink -}}" alt="{{ .Title }}" class="w-full rounded-xl">
+						<img src="{{- $imageMobile.RelPermalink -}}" 
+								 alt="{{ .Title }}" 
+								 class="w-full rounded-xl"
+								 loading="lazy"
+								 srcset="
+								 {{- with $sizes -}}
+								 	 {{- range $i, $e := . -}}
+								 		 {{- if ge $image.Width . -}}
+											 {{- if $i }}, {{ end -}}{{- ($image.Process (print "resize " . "x" (div $image.Width 3) " webp q80") ).RelPermalink }} {{ . }}w
+										 {{- end -}}
+									 {{- end -}}
+								 {{- end -}}" sizes="(min-width: 1024px) 100vw, 50vw">
 					</a>
 				</li>
+
 			{{- end -}}
 
 			{{ $p := slice }}
@@ -39,11 +54,22 @@
 
 				{{- $image := printf "images/**/%s" .Params.feature -}}
 				{{- $image = resources.GetMatch $image -}}
-				{{- $image = ($image.Fill "1200x400 q80 webp") -}}
+				{{- $imageMobile := $image.Fill "300x100 webp q80" -}}
 
 				<li class="splide__slide" class="mx-auto">
 					<a href="{{ .Permalink }}">
-						<img src="{{- $image.RelPermalink -}}" alt="{{ .Title }}" class="w-full rounded-xl">
+						<img src="{{- $imageMobile.RelPermalink -}}" 
+								 alt="{{ .Title }}" 
+								 class="w-full rounded-xl"
+								 loading="lazy"
+								 srcset="
+								 {{- with $sizes -}}
+								 	 {{- range $i, $e := . -}}
+								 		 {{- if ge $image.Width . -}}
+											 {{- if $i }}, {{ end -}}{{- ($image.Process (print "resize " . "x" (div $image.Width 3) " webp q80") ).RelPermalink }} {{ . }}w
+										 {{- end -}}
+									 {{- end -}}
+								 {{- end -}}" sizes="(min-width: 1024px) 100vw, 50vw">
 					</a>
 				</li>
 
