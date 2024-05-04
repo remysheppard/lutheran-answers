@@ -3,15 +3,15 @@ title: Our Policies
 ---
 This page contains our legal, comment, affiliate, and other policies. This page will be updated as needed without notice.
 
-## Comment Policy
+**This policy is effective as of 10 May 2021 and was last updated on 4 May 2024.**
 
-*Please note comments are not available at this time, but this will be the policy when the feature is added.*
+## Comment Policy
 
 Comments are welcomed and encouraged on this site, but there are some instances where comments will be edited or deleted as follows:
 
 * Comments deemed to be spam or solely promotional in nature will be deleted. Including a link to relevant content is permitted, but comments should be relevant to the post topic.
-* Comments including profanity will be deleted.
-* Comments containing language or concepts that could be deemed offensive will be deleted. Note this may include abusive, threatening, pornographic, offensive, misleading or libelous language.
+* Comments including profanity will be modified or deleted.
+* Comments containing language or concepts that could be deemed offensive will be deleted. Note this may include abusive, threatening, racist, pornographic, offensive, misleading or libelous language will be deleted.
 * Comments that attack an individual directly will be deleted.
 * Comments that harass other posters will be deleted. Please be respectful toward other contributors.
 * Anonymous comments may be deleted. We prefer comments from posters who identify themselves.
@@ -26,8 +26,6 @@ We participate in various affiliate programs as a way to support this website. A
 
 Your privacy is important to us. It is Lutheran Answers' policy to respect your privacy and comply with any applicable law and regulation regarding any personal information we may collect about you, including across our website, [https://www.lutherananswers.com](https://www.lutherananswers.com), and other sites we own and operate.
 
-**This policy is effective as of 10 May 2021 and was last updated on 28 September 2023.**
-
 ### Information We Collect
 
 Information we collect includes both information you knowingly and actively provide us when using or participating in any of our services and promotions, and any information automatically sent by your devices in the course of accessing our products and services.
@@ -38,7 +36,7 @@ When you visit our website, our servers may automatically log the standard data 
 
 Please be aware that while this information may not be personally identifying by itself, it may be possible to combine it with other data to personally identify individual persons.
 
-Please know that on this website we use [Fathom Analytics](https://usefathom.com/ref/JHDRUD), a privacy focused analytics service. While we try and integrate Fathom and use them as our analytic source to safeguard your privacy, some of our partner websites - including Buzzsprout, Convertkit, and Gumroad - may have their own analytics services in place, and you should familiarize yourself with their privacy policies.
+Please know that on this website we use [Fathom Analytics](https://usefathom.com/ref/JHDRUD), a privacy focused analytics service. While we try and integrate Fathom and use them as our analytic source to safeguard your privacy, some of our partner websites - including Buzzsprout, Convertkit, and TeeSpring - may have their own analytics services in place, and you should familiarize yourself with their privacy policies.
 
 ### Personal Information
 
@@ -62,12 +60,8 @@ We may collect personal information from you when you do any of the following on
 
 We may collect, hold, use, and disclose information for the following purposes, and personal information will not be further processed in a manner that is incompatible with these purposes:
 
-We may collect, hold, use, and disclose information for the following purposes, and personal information will not be further processed in a manner that is incompatible with these purposes:
-
 * to contact and communicate with you
 * for advertising and marketing, including to send you promotional information about our products and services and information about third parties that we consider may be of interest to you
-
-Please be aware that we may combine information we collect about you with general information or research data we receive from other trusted sources.
 
 ### Security of Your Personal Information
 
