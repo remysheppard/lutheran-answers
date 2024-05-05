@@ -111,7 +111,7 @@ menu:
 module:
   hugoVersion:
     extended: true
-    min: 0.118.2
+    min: 0.125.5
   mounts:
     - source: assets
       target: assets
