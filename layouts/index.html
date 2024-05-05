@@ -78,7 +78,7 @@
 
               <div class="overflow-hidden hover:shadow-lg transition-all h-[315px] mx-4 duration-300 rounded-lg bg-brand-black dark:bg-slate-900 hover:bg-black group">
                 <a href="{{ .Permalink }}" class="w-full block">
-                  <img alt="{{ .Title }} - Cover Image" src="{{- $image.RelPermalink -}}" class="max-h-40 w-full object-cover"/>
+                  <img alt="{{ .Title }} - Cover Image" src="{{- $image.RelPermalink -}}" height="{{- $image.Height -}}" width="{{- $image.Width -}}" class="max-h-40 w-full object-cover"/>
                 </a>
                 <div class="w-full p-4 flex flex-col">
 

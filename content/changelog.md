@@ -2,6 +2,14 @@
 title: Website Changelog
 ---
 
+#### Website Version 1.6.1
+* Minor pagespeed fixes
+* Made sure most images had alt tags
+* Made sure most images had explicit height and width
+* Made sure non-visible images lazy load  
+  *There still is a problem with the CSS background images being loaded in up front. Probably going to have to javascript that one.*
+* Moved Font Awesome to the header to avoid CLS problems with it. Also set it to defer. 
+
 #### Website Version 1.6
 ** This build is aimed at 100% pagespeed on mobile.**
 

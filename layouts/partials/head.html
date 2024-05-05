@@ -67,6 +67,9 @@
   <script src="https://cdn.usefathom.com/script.js" data-site="XOPOYTBY" defer></script>
 {{ end }}
 
+<!-- Font Awesome -->
+<script src="https://kit.fontawesome.com/a1b60d1457.js" crossorigin="anonymous" defer></script>
+
 <!-- Styles -->
 {{ with resources.Get "css/main.css" | resources.PostCSS (dict "inlineImports" true) | minify }}
   <style type="text/css">{{ .Content | safeCSS }}</style>

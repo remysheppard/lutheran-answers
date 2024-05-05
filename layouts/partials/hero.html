@@ -31,7 +31,9 @@
 						<img src="{{- $imageMobile.RelPermalink -}}" 
 								 alt="{{ .Title }}" 
 								 class="w-full rounded-xl"
-								 loading="lazy"
+								 loading="eager"
+								 height="{{- $imageMobile.Height -}}"
+								 width="{{- $imageMobile.Width -}}"
 								 srcset="
 								 {{- with $sizes -}}
 								 	 {{- range $i, $e := . -}}
@@ -61,7 +63,9 @@
 						<img src="{{- $imageMobile.RelPermalink -}}" 
 								 alt="{{ .Title }}" 
 								 class="w-full rounded-xl"
-								 loading="lazy"
+								 loading="eager"
+								 height="{{- $imageMobile.Height -}}"
+								 width="{{- $imageMobile.Width -}}"
 								 srcset="
 								 {{- with $sizes -}}
 								 	 {{- range $i, $e := . -}}
