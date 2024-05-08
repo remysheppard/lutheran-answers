@@ -2,6 +2,9 @@
 title: Website Changelog
 ---
 
+#### Website Version 1.62
+* Added the viral tweet link page
+
 #### Website Version 1.6.1
 * Minor pagespeed fixes
 * Made sure most images had alt tags
